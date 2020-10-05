@@ -41,5 +41,6 @@ print(len(screen.index))
 
 # In[10]:
 
-print(screen.sample(weights=screen.MarketCap))
+# Weight by square root of market cap to shift portfolio towards "value"
+print(screen.sample(weights=screen.MarketCap.apply(numpy.sqrt)))
 
