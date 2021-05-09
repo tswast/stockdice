@@ -41,10 +41,17 @@ def load_nasdaq_symbols():
     with open(NASDAQ_DIR / "nasdaqlisted.txt", "r") as nasdaq_file:
         is_header = True
         for line in nasdaq_file:
+            parts = line.split("|")
+            etf_col = parts[6]
+
             if is_header:
+                assert etf_col == "ETF"
                 is_header = False
                 continue
-            yield line.split("|")[0]
+
+            is_etf = etf_col == "Y"
+            if not is_etf:
+                yield parts[0]
 
 
 def load_other_symbols():
