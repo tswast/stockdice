@@ -16,43 +16,18 @@
 import pathlib
 
 import pandas
-import numpy
 
 
-def mc_to_float(cap):
-    if not cap:
-        return numpy.nan
-    if not cap.startswith('$'):
-        return numpy.nan
-    cap = cap[1:]
-    multiplier = 1.0
-    if cap.endswith('K'):
-        multiplier = 1000.0
-    elif cap.endswith('M'):
-        multiplier = 1.0e6
-    elif cap.endswith('B'):
-        multiplier = 1.0e9
-    elif cap.endswith('T'):
-        multiplier = 1.0e12
-
-    try:
-        return float(cap[:-1]) * multiplier
-    except ValueError:
-        print(cap)
-        raise
+DIR = pathlib.Path(__file__).parent
+FMP_DIR = DIR / "third_party" / "financialmodelingprep.com"
 
 
-# In[4]:
+screen_path = FMP_DIR / "values.csv"
+screen = pandas.read_csv(
+    screen_path, header=None, names=["symbol", "book", "market_cap", "average"]
+)
 
-screen_path = pathlib.Path("third_party") / "tdameritrade" / "screen.csv"
-screen = pandas.read_csv(screen_path)
-screen = screen.assign(MarketCap=screen.MarketCap.apply(mc_to_float))
-print(len(screen.index))
-screen = screen[screen.MarketCap.notna()]
-print(len(screen.index))
-
-# In[10]:
-
-# Weight by square root of market cap to shift portfolio towards "value"
-print(screen.sample(weights=screen.MarketCap.apply(numpy.sqrt)))
-
+# Weight by geometric mean of book value and market cap to weight towards value
+# factor.
+symbol = screen.sample(weights=screen["average"])
+print(symbol)
