@@ -19,10 +19,7 @@ import logging
 import time
 
 import aiohttp
-import pandas
-import numpy
 import math
-import requests
 import toml
 
 
@@ -92,9 +89,7 @@ async def append_values(session, symbol, out):
     book = await download_book_value(session, symbol)
     market_cap = await download_market_cap(session, symbol)
     average = geometric_mean(max(1, book), max(1, market_cap))
-    out.write(
-        f"{symbol},{book},{market_cap},{average}\n"
-    )
+    out.write(f"{symbol},{book},{market_cap},{average}\n")
 
 
 async def main():
