@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # coding: utf-8
 # Copyright 2021 Banana Juice LLC
 #
@@ -14,12 +15,13 @@
 # limitations under the License.
 
 import asyncio
+import functools
 import pathlib
 import logging
 import time
+import sys
 
 import aiohttp
-import math
 import toml
 
 
@@ -33,6 +35,7 @@ with open(DIR / "environment.toml") as config_file:
 
 FMP_API_KEY = config["FMP_API_KEY"]
 FMP_QUOTE = "https://financialmodelingprep.com/api/v3/quote/{symbol}?apikey={apikey}"
+FMP_INCOME_STATEMENT = "https://financialmodelingprep.com/api/v3/income-statement/{symbol}?limit=1&apikey={apikey}"
 FMP_BALANCE_SHEET = "https://financialmodelingprep.com/api/v3/balance-sheet-statement/{symbol}?period=quarter&limit=1&apikey={apikey}"
 
 BATCH_SIZE = 10
@@ -52,9 +55,72 @@ def load_symbols():
     return all_symbols
 
 
-async def download_book_value(session, symbol):
+class RateLimitError(Exception):
+    def __init__(self, seconds, millis):
+        self.seconds = seconds
+        self.millis = millis
+
+
+def retry(async_fn):
+    @functools.wraps(async_fn)
+    async def wrapped(*args):
+        while True:
+            try:
+                value = await async_fn(*args)
+            except RateLimitError as exp:
+                await asyncio.sleep(exp.seconds + (exp.millis / 1000.0))
+            except:
+                raise
+            else:
+                return value
+
+    return wrapped
+
+
+async def check_status(resp):
+    if resp.status == RATE_LIMIT_STATUS:
+        raise RateLimitError(1, 0)
+    resp_json = await resp.json()
+    if RATE_LIMIT_SECONDS in resp_json or RATE_LIMIT_MILLISECONDS in resp_json:
+        raise RateLimitError(
+            float(resp_json.get(RATE_LIMIT_SECONDS, 0)),
+            float(resp_json.get(RATE_LIMIT_MILLISECONDS, 0)),
+        )
+    return resp_json
+
+
+@retry
+async def download_annual_revenue(session, symbol, out):
+    """
+    https://www.ftserussell.com/research/factor-exposure-indexes-value-factor
+
+    Earnings Yield, Cash Flow Yield and Sales to Price (most performance)
+    """
+    url = FMP_INCOME_STATEMENT.format(symbol=symbol, apikey=FMP_API_KEY)
+    async with session.get(url) as resp:
+        resp_json = await check_status(resp)
+        profit = None
+        revenue = None
+        if resp_json:
+            profit = resp_json[0].get("grossProfit")
+            revenue = resp_json[0].get("revenue")
+        if revenue is None:
+            logging.warning(f"no revenue for {symbol}")
+            revenue = 0
+        if profit is None:
+            logging.warning(f"no profit for {symbol}")
+            profit = 0
+        out.write(f"{symbol},{profit},{revenue}\n")
+
+
+@retry
+async def download_book_value(session, symbol, out):
     """
     https://codingandfun.com/how-to-calculate-price-book-ratio-with-python/
+
+    https://www.ftserussell.com/research/factor-exposure-indexes-value-factor
+
+    Book to Price (most diversified)
     """
     url = FMP_BALANCE_SHEET.format(symbol=symbol, apikey=FMP_API_KEY)
     async with session.get(url) as resp:
@@ -64,11 +130,12 @@ async def download_book_value(session, symbol):
             book_value = resp_json[0].get("totalStockholdersEquity")
         if book_value is None:
             logging.warning(f"no book value for {symbol}")
-            return 1
-        return book_value
+            book_value = 0
+        out.write(f"{symbol},{book_value}\n")
 
 
-async def download_market_cap(session, symbol):
+@retry
+async def download_market_cap(session, symbol, out):
     url = FMP_QUOTE.format(symbol=symbol, apikey=FMP_API_KEY)
     async with session.get(url) as resp:
         resp_json = await resp.json()
@@ -77,26 +144,15 @@ async def download_market_cap(session, symbol):
             market_cap = resp_json[0].get("marketCap")
         if market_cap is None:
             logging.warning(f"no market cap for {symbol}")
-            return 1
-        return market_cap
+            market_cap = 0
+        out.write(f"{symbol},{market_cap}\n")
 
 
-def geometric_mean(a, b):
-    return math.exp(0.5 * (math.log(a) + math.log(b)))
-
-
-async def append_values(session, symbol, out):
-    book = await download_book_value(session, symbol)
-    market_cap = await download_market_cap(session, symbol)
-    average = geometric_mean(max(1, book), max(1, market_cap))
-    out.write(f"{symbol},{book},{market_cap},{average}\n")
-
-
-async def main():
+async def main(csv_path, download_fn):
     # all_symbols = load_symbols()[:1]
     all_symbols = load_symbols()
 
-    with open(FMP_DIR / "values.csv", "w") as out:
+    with open(csv_path, "w") as out:
         async with aiohttp.ClientSession() as session:
             batch_index = 0
             batch_start = time.monotonic()
@@ -109,9 +165,21 @@ async def main():
                         await asyncio.sleep(remaining)
                     batch_start = time.monotonic()
                     batch_index = 0
-                await append_values(session, symbol, out)
+                await download_fn(session, symbol, out)
 
 
 if __name__ == "__main__":
+    command = sys.argv[1] if len(sys.argv) > 1 else ""
+    if command == "quote":
+        csv_path = FMP_DIR / "quote.csv"
+        download_fn = download_market_cap
+    elif command == "balance-sheet":
+        csv_path = FMP_DIR / "balance-sheet-statement.csv"
+        download_fn = download_book_value
+    elif command == "income":
+        csv_path = FMP_DIR / "income-statement.csv"
+        download_fn = download_annual_revenue
+    else:
+        sys.exit("expected {quote,balance-sheet,income}")
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(main())
+    loop.run_until_complete(main(csv_path, download_fn))
