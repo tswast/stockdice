@@ -22,27 +22,16 @@ import time
 import sys
 
 import aiohttp
-import toml
+
+from helpers import *
 
 
-DIR = pathlib.Path(__file__).parent
-NASDAQ_DIR = DIR / "third_party" / "ftp.nasdaqtrader.com"
-FMP_DIR = DIR / "third_party" / "financialmodelingprep.com"
-
-
-with open(DIR / "environment.toml") as config_file:
-    config = toml.load(config_file)
-
-FMP_API_KEY = config["FMP_API_KEY"]
 FMP_QUOTE = "https://financialmodelingprep.com/api/v3/quote/{symbol}?apikey={apikey}"
 FMP_INCOME_STATEMENT = "https://financialmodelingprep.com/api/v3/income-statement/{symbol}?limit=1&apikey={apikey}"
 FMP_BALANCE_SHEET = "https://financialmodelingprep.com/api/v3/balance-sheet-statement/{symbol}?period=quarter&limit=1&apikey={apikey}"
 
 BATCH_SIZE = 10
 BATCH_WAIT = 1
-RATE_LIMIT_STATUS = 429
-RATE_LIMIT_SECONDS = "X-Rate-Limit-Retry-After-Seconds"
-RATE_LIMIT_MILLISECONDS = "X-Rate-Limit-Retry-After-Milliseconds"
 
 
 def load_symbols():
@@ -55,42 +44,8 @@ def load_symbols():
     return all_symbols
 
 
-class RateLimitError(Exception):
-    def __init__(self, seconds, millis):
-        self.seconds = seconds
-        self.millis = millis
-
-
-def retry(async_fn):
-    @functools.wraps(async_fn)
-    async def wrapped(*args):
-        while True:
-            try:
-                value = await async_fn(*args)
-            except RateLimitError as exp:
-                await asyncio.sleep(exp.seconds + (exp.millis / 1000.0))
-            except:
-                raise
-            else:
-                return value
-
-    return wrapped
-
-
-async def check_status(resp):
-    if resp.status == RATE_LIMIT_STATUS:
-        raise RateLimitError(1, 0)
-    resp_json = await resp.json()
-    if RATE_LIMIT_SECONDS in resp_json or RATE_LIMIT_MILLISECONDS in resp_json:
-        raise RateLimitError(
-            float(resp_json.get(RATE_LIMIT_SECONDS, 0)),
-            float(resp_json.get(RATE_LIMIT_MILLISECONDS, 0)),
-        )
-    return resp_json
-
-
-@retry
-async def download_annual_revenue(session, symbol, out):
+@retry_fmp
+async def download_income(session, symbol, out):
     """
     https://www.ftserussell.com/research/factor-exposure-indexes-value-factor
 
@@ -101,20 +56,22 @@ async def download_annual_revenue(session, symbol, out):
         resp_json = await check_status(resp)
         profit = None
         revenue = None
+        currency = None
         if resp_json:
             profit = resp_json[0].get("grossProfit")
             revenue = resp_json[0].get("revenue")
+            currency = resp_json[0].get("reportedCurrency")
         if revenue is None:
             logging.warning(f"no revenue for {symbol}")
             revenue = 0
         if profit is None:
             logging.warning(f"no profit for {symbol}")
             profit = 0
-        out.write(f"{symbol},{profit},{revenue}\n")
+        out.write(f"{symbol},{profit},{revenue},{currency}\n")
 
 
-@retry
-async def download_book_value(session, symbol, out):
+@retry_fmp
+async def download_balance_sheet(session, symbol, out):
     """
     https://codingandfun.com/how-to-calculate-price-book-ratio-with-python/
 
@@ -124,21 +81,23 @@ async def download_book_value(session, symbol, out):
     """
     url = FMP_BALANCE_SHEET.format(symbol=symbol, apikey=FMP_API_KEY)
     async with session.get(url) as resp:
-        resp_json = await resp.json()
+        resp_json = await check_status(resp)
         book_value = None
+        currency = None
         if resp_json:
             book_value = resp_json[0].get("totalStockholdersEquity")
+            currency = resp_json[0].get("reportedCurrency")
         if book_value is None:
             logging.warning(f"no book value for {symbol}")
             book_value = 0
-        out.write(f"{symbol},{book_value}\n")
+        out.write(f"{symbol},{book_value},{currency}\n")
 
 
-@retry
+@retry_fmp
 async def download_market_cap(session, symbol, out):
     url = FMP_QUOTE.format(symbol=symbol, apikey=FMP_API_KEY)
     async with session.get(url) as resp:
-        resp_json = await resp.json()
+        resp_json = await check_status(resp)
         market_cap = None
         if resp_json:
             market_cap = resp_json[0].get("marketCap")
@@ -175,10 +134,10 @@ if __name__ == "__main__":
         download_fn = download_market_cap
     elif command == "balance-sheet":
         csv_path = FMP_DIR / "balance-sheet-statement.csv"
-        download_fn = download_book_value
+        download_fn = download_balance_sheet
     elif command == "income":
         csv_path = FMP_DIR / "income-statement.csv"
-        download_fn = download_annual_revenue
+        download_fn = download_income
     else:
         sys.exit("expected {quote,balance-sheet,income}")
     loop = asyncio.get_event_loop()

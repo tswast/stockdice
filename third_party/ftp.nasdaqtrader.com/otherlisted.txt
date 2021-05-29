@@ -13,7 +13,9 @@ AAIC$C|Arlington Asset Investment Corp 8.250% Seies C Fixed-to-Floating Rate Cum
 AAMC|Altisource Asset Management Corp Com|A|AAMC|N|100|N|AAMC
 AAN|Aarons Holdings Company, Inc. Common Stock |N|AAN|N|100|N|AAN
 AAP|Advance Auto Parts Inc Advance Auto Parts Inc W/I|N|AAP|N|100|N|AAP
+AAQC|Accelerate Acquisition Corp. Class A Common Stock|N|AAQC|N|100|N|AAQC
 AAQC.U|Accelerate Acquisition Corp. Units, each consisting of one Class A common stock, and one-third of one redeemable warrant|N|AAQC.U|N|100|N|AAQC=
+AAQC.W|Accelerate Acquisition Corp. Warrants, each whole warrant exercisable for one share of Class A common stock at an exercise price of $11.50|N|AAQC.WS|N|100|N|AAQC+
 AAT|American Assets Trust, Inc. Common Stock|N|AAT|N|100|N|AAT
 AAU|Almaden Minerals, Ltd. Common Shares|A|AAU|N|100|N|AAU
 AB|AllianceBernstein Holding L.P.  Units|N|AB|N|100|N|AB
@@ -31,7 +33,6 @@ ABR$C|Arbor Realty Trust Cumulative Redeemable Preferred Series C|N|ABRpC|N|100|
 ABT|Abbott Laboratories Common Stock|N|ABT|N|100|N|ABT
 AC|Associated Capital Group, Inc. Common Stock|N|AC|N|100|N|AC
 ACA|Arcosa, Inc. Common Stock |N|ACA|N|100|N|ACA
-ACB|Aurora Cannabis Inc. Common Shares|N|ACB|N|100|N|ACB
 ACC|American Campus Communities Inc Common Stock|N|ACC|N|100|N|ACC
 ACCO|Acco Brands Corporation Common Stock|N|ACCO|N|100|N|ACCO
 ACEL|Accel Entertainment, Inc. |N|ACEL|N|100|N|ACEL
@@ -51,6 +52,8 @@ ACND|Ascendant Digital Acquisition Corp. Class A Ordinary Shares|N|ACND|N|100|N|
 ACND.U|Ascendant Digital Acquisition Corp. Units, each consisting of one Class A ordinary share and one-half of one redeemable warrant|N|ACND.U|N|100|N|ACND=
 ACND.W|Ascendant Digital Acquisition Corp. Warrants, each whole warrant exercisable for one Class A ordinary share at an exercise price of $11.50 per share|N|ACND.WS|N|100|N|ACND+
 ACP|Aberdeen Income Credit Strategies Fund Common Shares|N|ACP|N|100|N|ACP
+ACP$A|Aberdeen Income Credit Strategies Fund 5.250% Series A Perpetual Preferred Stock|N|ACPpA|N|100|N|ACP-A
+ACP.R|Aberdeen Income Credit Strategies Fund Rights (expiring June 16, 2021)|N|ACPr|N|100|N|ACP^
 ACR|ACRES Commercial Realty Corp. Common Stock|N|ACR|N|100|N|ACR
 ACR$C|ACRES Commercial Realty Corp. 8.625% Fixed-to-Floating Series C Cumulative Redeemable Preferred Stock |N|ACRpC|N|100|N|ACR-C
 ACRE|Ares Commercial Real Estate Corporation Common Stock|N|ACRE|N|100|N|ACRE
@@ -135,6 +138,7 @@ AGO|Assured Guaranty Ltd. Common Stock|N|AGO|N|100|N|AGO
 AGO$B|Assured Guaranty Ltd.|N|AGOpB|N|100|N|AGO-B
 AGO$E|Assured Guaranty Ltd.|N|AGOpE|N|100|N|AGO-E
 AGO$F|Assured Guaranty Ltd.|N|AGOpF|N|100|N|AGO-F
+AGOX|Adaptive Growth Opportunities ETF|P|AGOX|Y|100|N|AGOX
 AGQ|ProShares Ultra Silver|P|AGQ|Y|100|N|AGQ
 AGR|Avangrid, Inc. Common Stock|N|AGR|N|100|N|AGR
 AGRO|Adecoagro S.A. Common Shares|N|AGRO|N|100|N|AGRO
@@ -364,13 +368,9 @@ ASXC|Asensus Surgical, Inc. Common Stock|A|ASXC|N|100|N|ASXC
 ASZ|Austerlitz Acquisition Corporation II Class A Ordinary Shares|N|ASZ|N|100|N|ASZ
 ASZ.U|Austerlitz Acquisition Corporation II Units, each consisting of one Class A ordinary share and one-fourth of one redeemable warrant|N|ASZ.U|N|100|N|ASZ=
 ASZ.W|Austerlitz Acquisition Corporation II Warrants, each whole Warrant exercisable for one Class A Ordinary Share at an exercise price of $11.50 per share|N|ASZ.WS|N|100|N|ASZ+
-AT|Atlantic Power Corporation Ordinary Shares (Canada)|N|AT|N|100|N|AT
 ATA|Americas Technology Acquisition Corp. Ordinary Shares|N|ATA|N|100|N|ATA
 ATA.U|Americas Technology Acquisition Corp. Units, each consisting of one Ordinary Share and one half of Redeemable Warrant|N|ATA.U|N|100|N|ATA=
 ATA.W|Americas Technology Acquisition Corp. Redeemable Warrants, each whole warrant exercisable for one Ordinary Share at an exercise price of $11.50|N|ATA.WS|N|100|N|ATA+
-ATAC|Altimar Acquisition Corporation Class A Ordinary Shares|N|ATAC|N|100|N|ATAC
-ATAC.U|Altimar Acquisition Corporation Units, each consisting of one Class A ordinary share and one-third of one redeemable warrant|N|ATAC.U|N|100|N|ATAC=
-ATAC.W|Altimar Acquisition Corporation Redeemable Warrants, each whole warrant exercisable for one Class A ordinary share at an exercise price of $11.50|N|ATAC.WS|N|100|N|ATAC+
 ATAQ|Altimar Acquisition Corp. III Class A Ordinary Shares|N|ATAQ|N|100|N|ATAQ
 ATAQ.U|Altimar Acquisition Corp. III Units, each consisting of one Class A Ordinary Share and one-fourth of one redeemable warrant|N|ATAQ.U|N|100|N|ATAQ=
 ATAQ.W|Altimar Acquisition Corp. III Warrants, each whole warrant exercisable for one Class A Ordinary Share at an exercise price of $11.50 per share|N|ATAQ.WS|N|100|N|ATAQ+
@@ -620,10 +620,12 @@ BIP|Brookfield Infrastructure Partners LP Limited Partnership Units|N|BIP|N|100|
 BIP$A|Brookfield Infrastructure Partners LP 5.125% Class A Preferred Limited Partnership Units, Series 13|N|BIPpA|N|100|N|BIP-A
 BIP$B|Brookfield Infrastructure Partners LP 5.000% Class A Preferred Limited Partnership Units, Series 14|N|BIPpB|N|100|N|BIP-B
 BIPC|Brookfield Infrastructure Partners LP Class A Subordinate Voting Shares |N|BIPC|N|100|N|BIPC
+BIPH|Brookfield Infrastructure Corporation 5.000% Subordinated Notes due 2081|N|BIPH|N|100|N|BIPH
 BIT|BlackRock Multi-Sector Income Trust Common Shares of Beneficial Interest|N|BIT|N|100|N|BIT
 BITE|Bite Acquisition Corp. Common Stock|N|BITE|N|100|N|BITE
 BITE.U|Bite Acquisition Corp. Units, each consisting of one share of common stock and one-half of one redeemable warrant|N|BITE.U|N|100|N|BITE=
 BITE.W|Bite Acquisition Corp. Warrants, each whole warrant exercisable for one share of common stock at an exercise price of $11.50|N|BITE.WS|N|100|N|BITE+
+BITQ|Bitwise Crypto Industry Innovators ETF|P|BITQ|Y|100|N|BITQ
 BIV|Vanguard Intermediate-Term Bond ETF|P|BIV|Y|100|N|BIV
 BIZD|VanEck Vectors BDC Income ETF|P|BIZD|Y|100|N|BIZD
 BJ|BJ's Wholesale Club Holdings, Inc. Common Stock|N|BJ|N|100|N|BJ
@@ -746,7 +748,6 @@ BSX|Boston Scientific Corporation Common Stock|N|BSX|N|100|N|BSX
 BSX$A|Boston Scientific Corporation 5.50% Mandatory Convertible Preferred Stock, Series A|N|BSXpA|N|100|N|BSX-A
 BTA|BlackRock Long-Term Municipal Advantage Trust BlackRock Long-Term Municipal Advantage Trust Common Shares of Beneficial Interest|N|BTA|N|100|N|BTA
 BTAL|AGFiQ U.S. Market Neutral Anti-Beta Fund|P|BTAL|Y|100|N|BTAL
-BTC|ClearShares Piton Intermediate Fixed income ETF|P|BTC|Y|100|N|BTC
 BTCM|BIT Mining Limited ADS|N|BTCM|N|100|N|BTCM
 BTEK|BlackRock Future Tech ETF|P|BTEK|Y|100|N|BTEK
 BTG|B2Gold Corp Common shares (Canada)|A|BTG|N|100|N|BTG
@@ -771,6 +772,7 @@ BV|BrightView Holdings, Inc. Common Stock|N|BV|N|100|N|BV
 BVH|Bluegreen Vacations Holding Corporation Class A Common Stock|N|BVH|N|100|N|BVH
 BVN|Buenaventura Mining Company Inc.|N|BVN|N|100|N|BVN
 BW|Babcock & Wilcox Enterprises, Inc. Common Stock|N|BW|N|100|N|BW
+BW$A|Babcock & Wilcox Enterprises, Inc. 7.75% Series A Cumulative Perpetual Preferred Stock|N|BWpA|N|100|N|BW-A
 BWA|BorgWarner Inc. Common Stock|N|BWA|N|100|N|BWA
 BWG|BrandywineGLOBAL Global Income Opportunities Fund Inc.|N|BWG|N|100|N|BWG
 BWL.A|Bowl America, Inc. Class A Common Stock|A|BWL.A|N|100|N|BWL.A
@@ -848,7 +850,7 @@ CC|Chemours Company (The) Common Stock|N|CC|N|100|N|CC
 CCAC|CITIC Capital Acquisition Corp. Class A Ordinary Shares|N|CCAC|N|100|N|CCAC
 CCAC.U|CITIC Capital Acquisition Corp. Units|N|CCAC.U|N|100|N|CCAC=
 CCAC.W|CITIC Capital Acquisition Corp. Warrants, each whole warrant exercisable for one Class A ordinary share at an exercise price of $11.50 per share|N|CCAC.WS|N|100|N|CCAC+
-CCEP|Coca-Cola European Partners plc Ordinary Shares|N|CCEP|N|100|N|CCEP
+CCEP|Coca-Cola Europacific Partners plc Ordinary Shares|N|CCEP|N|100|N|CCEP
 CCF|Chase Corporation Common Stock|A|CCF|N|100|N|CCF
 CCI|Crown Castle International Corp. (REIT) Common Stock|N|CCI|N|100|N|CCI
 CCIV|Churchill Capital Corp IV Class A Common Stock|N|CCIV|N|100|N|CCIV
@@ -1141,7 +1143,7 @@ CRU.U|Crucible Acquisition Corporation Units, each consisting of one share of Cl
 CRU.W|Crucible Acquisition Corporation Redeemable warrants, each whole warrant exercisable for one share of Class A common stock at an exercise price of $11.50|N|CRU.WS|N|100|N|CRU+
 CRY|CryoLife, Inc. Common Stock|N|CRY|N|100|N|CRY
 CS|Credit Suisse Group American Depositary Shares|N|CS|N|100|N|CS
-CSAN|Cosan S.A. ADR|N|CSAN|N|100|N|CSAN
+CSAN|Cosan S.A. ADS|N|CSAN|N|100|N|CSAN
 CSD|Invesco S&P Spin-Off ETF|P|CSD|Y|100|N|CSD
 CSL|Carlisle Companies Incorporated Common Stock|N|CSL|N|100|N|CSL
 CSLT|Castlight Health, Inc. Class B Common Stock|N|CSLT|N|100|N|CSLT
@@ -1180,7 +1182,6 @@ CTR|ClearBridge MLP and Midstream Total Return Fund Inc. Common Stock|N|CTR|N|10
 CTS|CTS Corporation Common Stock|N|CTS|N|100|N|CTS
 CTT|CatchMark Timber Trust, Inc. Class A Common Stock|N|CTT|N|100|N|CTT
 CTVA|Corteva, Inc. Common Stock |N|CTVA|N|100|N|CTVA
-CUB|Cubic Corporation Common Stock|N|CUB|N|100|N|CUB
 CUBB|Customers Bancorp, Inc 5.375% Subordinated Notes Due 2034|N|CUBB|N|100|N|CUBB
 CUBE|CubeSmart Common Shares|N|CUBE|N|100|N|CUBE
 CUBI|Customers Bancorp, Inc Common Stock|N|CUBI|N|100|N|CUBI
@@ -1373,7 +1374,6 @@ DLNG|Dynagas LNG Partners LP Common Units|N|DLNG|N|100|N|DLNG
 DLNG$A|Dynagas LNG Partners LP 9.00% Series A Cumulative Redeemable Preferred Units|N|DLNGpA|N|100|N|DLNG-A
 DLNG$B|Dynagas LNG Partners LP 8.75% Series B Fixed to Floating Rate Cumulative Redeemable Perpetual Preferred Units, liquidation preference $25.00 per Uni|N|DLNGpB|N|100|N|DLNG-B
 DLR|Digital Realty Trust, Inc. Common Stock|N|DLR|N|100|N|DLR
-DLR$C|Digital Realty Trust, Inc. 6.625% Series C Cumulative Redeemable Perpetual Preferred Stock|N|DLRpC|N|100|N|DLR-C
 DLR$J|Digital Realty Trust, Inc. 5.250% Series J Cumulative Redeemable Preferred Stock|N|DLRpJ|N|100|N|DLR-J
 DLR$K|Digital Realty Trust, Inc. 5.850% Series K Cumulative Redeemable Preferred Stock, par value $0.01 per share|N|DLRpK|N|100|N|DLR-K
 DLR$L|Digital Realty Trust, Inc. 5.200% Series L Cumulative Redeemable Preferred Stock|N|DLRpL|N|100|N|DLR-L
@@ -1450,6 +1450,7 @@ DSJA|Innovator Double Stacker ETF - January|Z|DSJA|Y|100|N|DSJA
 DSL|DoubleLine Income Solutions Fund Common Shares of Beneficial Interests|N|DSL|N|100|N|DSL
 DSM|BNY Mellon Strategic Municipal Bond Fund, Inc. Common Stock|N|DSM|N|100|N|DSM
 DSOC|Innovator Double Stacker ETF - October|Z|DSOC|Y|100|N|DSOC
+DSPC|The De-SPAC ETF|P|DSPC|Y|100|N|DSPC
 DSS|Document Security Systems, Inc. Common Stock|A|DSS|N|100|N|DSS
 DSSI|Diamond S Shipping Inc. Common Stock |N|DSSI|N|100|N|DSSI
 DSTL|Distillate U.S. Fundamental Stability & Value ETF|P|DSTL|Y|100|N|DSTL
@@ -1588,6 +1589,7 @@ EFV|iShares MSCI EAFE Value ETF|Z|EFV|Y|100|N|EFV
 EFX|Equifax, Inc. Common Stock|N|EFX|N|100|N|EFX
 EFZ|ProShares Short MSCI EAFE|P|EFZ|Y|100|N|EFZ
 EGF|Blackrock Enhanced Government Fund, Inc. Common Stock|N|EGF|N|100|N|EGF
+EGGF.U|EG Acquisition Corp. Units, each consisting of one share of Class A common stock and one-third of one redeemable warrant|N|EGGF.U|N|100|N|EGGF=
 EGHT|8x8 Inc Common Stock|N|EGHT|N|100|N|EGHT
 EGIS|2ndVote Society Defended ETF|Z|EGIS|Y|100|N|EGIS
 EGO|Eldorado Gold Corporation Ordinary Shares|N|EGO|N|100|N|EGO
@@ -1691,6 +1693,7 @@ EPR|EPR Properties Common Stock|N|EPR|N|100|N|EPR
 EPR$C|EPR Properties 5.75% Series C Cumulative Convertible Preferred Shares|N|EPRpC|N|100|N|EPR-C
 EPR$E|EPR Properties Series E Cumulative Conv Pfd Shs Ser E|N|EPRpE|N|100|N|EPR-E
 EPR$G|EPR Properties 5.750% Series G Cumulative Redeemable Preferred Shares|N|EPRpG|N|100|N|EPR-G
+EPRE|First Trust TCW ESG Premier Equity ETF|P|EPRE|Y|100|N|EPRE
 EPRF|Innovator S&P Investment Grade Preferred ETF|Z|EPRF|Y|100|N|EPRF
 EPRT|Essential Properties Realty Trust, Inc. Common Stock|N|EPRT|N|100|N|EPRT
 EPS|WisdomTree U.S. LargeCap Fund|P|EPS|Y|100|N|EPS
@@ -1864,6 +1867,7 @@ FAM|First Trust/Aberdeen Global Opportunity Income Fund First Trust/Aberdeen Glo
 FAN|First Trust Global Wind Energy ETF|P|FAN|Y|100|N|FAN
 FAPR|FT Cboe Vest U.S. Equity Buffer ETF - April|Z|FAPR|Y|100|N|FAPR
 FAS|Direxion Financial Bull 3X Shares|P|FAS|Y|100|N|FAS
+FATT|Fat Tail Risk ETF|P|FATT|Y|100|N|FATT
 FAUG|FT Cboe Vest U.S. Equity Buffer ETF - August|Z|FAUG|Y|100|N|FAUG
 FAX|Aberdeen Asia-Pacific Income Fund Inc Common Stock|A|FAX|N|100|N|FAX
 FAZ|Direxion Financial Bear 3X Shares|P|FAZ|Y|100|N|FAZ
@@ -1889,6 +1893,7 @@ FCOR|Fidelity Corporate Bond ETF|P|FCOR|Y|100|N|FCOR
 FCPI|Fidelity Stocks for Inflation ETF |Z|FCPI|Y|100|N|FCPI
 FCPT|Four Corners Property Trust, Inc. Common Stock|N|FCPT|N|100|N|FCPT
 FCRW|First Eagle Alternative Capital BDC, Inc. 6.125% Notes Due 2023|N|FCRW|N|100|N|FCRW
+FCRX|First Eagle Alternative Capital BDC, Inc. 5.000% Notes due 2026|N|FCRX|N|100|N|FCRX
 FCRZ|First Eagle Alternative Capital BDC, Inc. 6.75% Notes due 2022|N|FCRZ|N|100|N|FCRZ
 FCT|First Trust Senior Floating Rate Income Fund II Common Shares of Beneficial Interest|N|FCT|N|100|N|FCT
 FCTR|First Trust Lunt U.S. Factor Rotation ETF|Z|FCTR|Y|100|N|FCTR
@@ -1929,7 +1934,6 @@ FF|FutureFuel Corp.  Common shares|N|FF|N|100|N|FF
 FFA|First Trust Enhanced Equity Income Fund|N|FFA|N|100|N|FFA
 FFC|Flaherty & Crumrine Preferred and Income Securities Fund Incorporated|N|FFC|N|100|N|FFC
 FFEB|FT Cboe Vest U.S. Equity Buffer ETF - February|Z|FFEB|Y|100|N|FFEB
-FFG|FBL Financial Group, Inc. Common Stock|N|FFG|N|100|N|FFG
 FFHG|Formula Folios Hedged Growth ETF |Z|FFHG|Y|100|N|FFHG
 FFIU|UVA Unconstrained Medium-Term Fixed Income ETF|P|FFIU|Y|100|N|FFIU
 FFR|First Trust FTSE EPRA/NAREIT Global Real Estate Index Fund|P|FFR|Y|100|N|FFR
@@ -1951,6 +1955,7 @@ FHN$B|First Horizon Corporation Depositary Shares, each representing a 1/400th i
 FHN$C|First Horizon Corporation Depositary Shares, each representing a 1/400th interest in a share of Non-Cumulative Perpetual Preferred Stock, Series C|N|FHNpC|N|100|N|FHN-C
 FHN$D|First Horizon Corporation Depositary Shares, each representing a 1/400th interest in a share of Non-Cumulative Perpetual Preferred Stock, Series D|N|FHNpD|N|100|N|FHN-D
 FHN$E|First Horizon Corporation Depositary Shares, each representing a 1/4,000th interest in a share of Non-Cumulative Perpetual Preferred Stock, Series E|N|FHNpE|N|100|N|FHN-E
+FHN$F|First Horizon Corporation Depositary Shares, each representing 1/4000th Interest in a Share of Non-Cumulative Perpetual Preferred Stock, Series F|N|FHNpF|N|100|N|FHN-F
 FHS|First High-School Education Group Co., Ltd. American Depositary Shares|N|FHS|N|100|N|FHS
 FI|Frank's International N.V. Common Stock|N|FI|N|100|N|FI
 FIBR|iShares U.S. Fixed Income Balanced Risk Factor ETF|Z|FIBR|Y|100|N|FIBR
@@ -1960,6 +1965,7 @@ FIDU|Fidelity MSCI Industrials Index ETF|P|FIDU|Y|100|N|FIDU
 FIEE|UBS AG FI Enhanced Europe 50 ETN due February 12, 2026|P|FIEE|N|100|N|FIEE
 FIF|First Trust Energy Infrastructure Fund Common Shares of Beneficial Interest|N|FIF|N|100|N|FIF
 FIGB|Fidelity Investment Grade Bond ETF|P|FIGB|Y|100|N|FIGB
+FIGS|FIGS, Inc. Class A Common Stock|N|FIGS|N|100|N|FIGS
 FIHD|UBS AG UBS AG FI Enhanced Global High Yield ETN due March 3, 2026|P|FIHD|N|100|N|FIHD
 FILL|iShares MSCI Global Energy Producers Fund|P|FILL|Y|100|N|FILL
 FINS|Angel Oak Financial Strategies Income Term Trust Common Shares of Beneficial Interest|N|FINS|N|100|N|FINS
@@ -2053,6 +2059,7 @@ FMC|FMC Corporation Common Stock|N|FMC|N|100|N|FMC
 FMF|First Trust Managed Futures Strategy Fund|P|FMF|Y|100|N|FMF
 FMIL|Fidelity New Millennium ETF|Z|FMIL|Y|100|N|FMIL
 FMN|Federated Hermes Premier Municipal Income Fund|N|FMN|N|100|N|FMN
+FMNY|First Trust New York Municipal High Income ETF|P|FMNY|Y|100|N|FMNY
 FMO|Fiduciary/Claymore Energy Infrastructure Fund Common Shares of Beneficial Interest|N|FMO|N|100|N|FMO
 FMS|Fresenius Medical Care AG Common Stock|N|FMS|N|100|N|FMS
 FMX|Fomento Economico Mexicano S.A.B. de C.V. Common Stock|N|FMX|N|100|N|FMX
@@ -2082,6 +2089,7 @@ FOA.W|Finance of America Companies Inc. Warrants, each whole warrant exercisable
 FOCT|FT Cboe Vest U.S. Equity Buffer ETF - October|Z|FOCT|Y|100|N|FOCT
 FOE|Ferro Corporation Common Stock|N|FOE|N|100|N|FOE
 FOF|Cohen & Steers Closed-End Opportunity Fund, Inc. Common Stock|N|FOF|N|100|N|FOF
+FOMO|FOMO ETF|Z|FOMO|Y|100|N|FOMO
 FOR|Forestar Group Inc Common Stock |N|FOR|N|100|N|FOR
 FORH|Formidable ETF|P|FORH|Y|100|N|FORH
 FOUR|Shift4 Payments, Inc. Class A Common Stock|N|FOUR|N|100|N|FOUR
@@ -2215,6 +2223,7 @@ GAB$G|Gabelli Equity Trust, Inc. (The) Series G Cumulative Preferred Stock|N|GAB
 GAB$H|Gabelli Equity Trust, Inc. (The) Pfd Ser H|N|GABpH|N|100|N|GAB-H
 GAB$J|Gabelli Equity Trust, Inc. (The) 5.45% Series J Cumulative Preferred Stock|N|GABpJ|N|100|N|GAB-J
 GAB$K|Gabelli Equity Trust, Inc. (The) 5.00% Series K Cumulative Preferred Stock|N|GABpK|N|100|N|GAB-K
+GAB.V|Gabelli Equity Trust, Inc. (The) Rights (expiring July 14, 2021) When Issued|N|GABrw|N|100|N|GAB^#
 GAL|SPDR SSgA Global Allocation ETF|P|GAL|Y|100|N|GAL
 GAM|General American Investors, Inc. Common Stock|N|GAM|N|100|N|GAM
 GAM$B|General American Investors Company, Inc. Cumulative Preferred Stock|N|GAMpB|N|100|N|GAM-B
@@ -2277,6 +2286,7 @@ GFF|Griffon Corporation Common Stock|N|GFF|N|100|N|GFF
 GFI|Gold Fields Limited American Depositary Shares|N|GFI|N|100|N|GFI
 GFL|GFL Environmental Inc. Subordinate voting shares, no par value|N|GFL|N|100|N|GFL
 GFLU|GFL Environmental Inc. Tangible Equity Units|N|GFLU|N|100|N|GFLU
+GFOR.U|Graf Acquisition Corp. IV Units|N|GFOR.U|N|100|N|GFOR=
 GFX|Golden Falcon Acquisition Corp. Class A Common Stock|N|GFX|N|100|N|GFX
 GFX.U|Golden Falcon Acquisition Corp. Units, each consisting of one share of Class A Common Stock and one-half of one Warrant|N|GFX.U|N|100|N|GFX=
 GFX.W|Golden Falcon Acquisition Corp. Warrants, each whole warrant exercisable for one share of Class A Common Stock at an exercise price of $11.50|N|GFX.WS|N|100|N|GFX+
@@ -2323,6 +2333,7 @@ GL|Globe Life Inc. Common Stock|N|GL|N|100|N|GL
 GL$C|Globe Life Inc. 6.125% Junior Subordinated Debentures due 2056|N|GLpC|N|100|N|GL-C
 GLCN|VanEck Vectors China Growth Leaders ETF|P|GLCN|Y|100|N|GLCN
 GLD|SPDR Gold Trust|P|GLD|Y|100|N|GLD
+GLDB|Strategy Shares Gold-Hedged Bond ETF|Z|GLDB|Y|100|N|GLDB
 GLDG|GoldMining Inc. Common Shares|A|GLDG|N|100|N|GLDG
 GLDM|SPDR Gold MiniShares Trust|P|GLDM|Y|100|N|GLDM
 GLEO|Galileo Acquisition Corp. Ordinary Shares|N|GLEO|N|100|N|GLEO
@@ -2332,6 +2343,7 @@ GLIF|AGFiQ Global Infrastructure ETF|P|GLIF|Y|100|N|GLIF
 GLIN|VanEck Vectors India Growth Leaders ETF|P|GLIN|Y|100|N|GLIN
 GLL|ProShares UltraShort Gold|P|GLL|Y|100|N|GLL
 GLO|Clough Global Opportunities Fund Common Stock|A|GLO|N|100|N|GLO
+GLO.R|Clough Global Opportunities Fund Rights |A|GLOr|N|100|N|GLO^
 GLOB|Globant S.A. Common Shares|N|GLOB|N|100|N|GLOB
 GLOG|GasLog Ltd. Common Shares|N|GLOG|N|100|N|GLOG
 GLOG$A|GasLog LP. 8.75% Series A Cumulative Redeemable Perpetual Preference Shares|N|GLOGpA|N|100|N|GLOG-A
@@ -2343,6 +2355,7 @@ GLP|Global Partners LP Global Partners LP Common Units representing Limited Part
 GLP$A|Global Partners LP 9.75% Series A Fixed-to-Floating Rate Cumulative Redeemable Perpetual Preferred Units representing limited partner interests|N|GLPpA|N|100|N|GLP-A
 GLP$B|Global Partners LP 9.50% Series B Fixed Rate Cumulative Redeemable Perpetual Preferred Units representing limited partner interests|N|GLPpB|N|100|N|GLP-B
 GLQ|Clough Global Equity Fund Clough Global Equity Fund Common Shares of Beneficial Interest|A|GLQ|N|100|N|GLQ
+GLQ.R|Clough Global Equity Fund Rights |A|GLQr|N|100|N|GLQ^
 GLRY|Northern Lights Fund Trust IV Inspire Faithward Mid Cap Momentum ESG ETF|P|GLRY|Y|100|N|GLRY
 GLT|Glatfelter Corporation Common Stock|N|GLT|N|100|N|GLT
 GLTR|Aberdeen Standard Physical Precious Metals Basket Shares ETF|P|GLTR|Y|100|N|GLTR
@@ -2350,6 +2363,7 @@ GLU|Gabelli Global Utility Common Shares of Beneficial Ownership|A|GLU|N|100|N|G
 GLU$A|The Gabelli Global Utility and Income Trust Series A Cumulative Puttable and Callable Preferred Shares|A|GLUpA|N|100|N|GLU-A
 GLU$B|The Gabelli Global Utility and Income Trust Series B Cumulative Puttable and Callable Preferred Shares|A|GLUpB|N|100|N|GLU-B
 GLV|Clough Global Dividend and Income Fund Common Shares of beneficial interest|A|GLV|N|100|N|GLV
+GLV.R|Clough Global Dividend and Income Fund Right |A|GLVr|N|100|N|GLV^
 GLW|Corning Incorporated Common Stock|N|GLW|N|100|N|GLW
 GM|General Motors Company Common Stock|N|GM|N|100|N|GM
 GME|GameStop Corporation Common Stock|N|GME|N|100|N|GME
@@ -2381,6 +2395,7 @@ GOAC.W|GO Acquisition Corp. Warrants, each whole warrant exercisable for one sha
 GOAT|VanEck Vectors Morningstar Global Wide Moat ETF|Z|GOAT|Y|100|N|GOAT
 GOAU|US Global GO Gold and Precious Metal Miners ETF|P|GOAU|Y|100|N|GOAU
 GOED|1847 Goedeker Inc. Commom Stock|A|GOED|N|100|N|GOED
+GOED.W|1847 Goedeker Inc. Warrants to Purchase Common Stock|A|GOED.WS|N|100|N|GOED+
 GOEX|Global X Gold Explorers ETF|P|GOEX|Y|100|N|GOEX
 GOF|Guggenheim Strategic Opportunities Fund Common Shares of Beneficial Interest|N|GOF|N|100|N|GOF
 GOL|Gol Linhas Aereas Inteligentes S.A. Sponsored ADR representing 2 Pfd Shares|N|GOL|N|100|N|GOL
@@ -2399,6 +2414,7 @@ GPL|Great Panther Mining Limited Ordinary Shares (Canada)|A|GPL|N|100|N|GPL
 GPM|Guggenheim Enhanced Equity Income Fund|N|GPM|N|100|N|GPM
 GPMT|Granite Point Mortgage Trust Inc. Common Stock|N|GPMT|N|100|N|GPMT
 GPN|Global Payments Inc. Common Stock|N|GPN|N|100|N|GPN
+GPOR|Gulfport Energy Corporation Common Shares|N|GPOR|N|100|N|GPOR
 GPRK|Geopark Ltd Common Shares|N|GPRK|N|100|N|GPRK
 GPS|Gap, Inc. (The) Common Stock|N|GPS|N|100|N|GPS
 GPX|GP Strategies Corporation Common Stock|N|GPX|N|100|N|GPX
@@ -2422,7 +2438,6 @@ GS$C|Goldman Sachs Group, Inc. (The) Depositary Share repstg 1/1000th Preferred 
 GS$D|Goldman Sachs Group, Inc. (The) Dep Shs repstg 1/1000 Pfd Ser D Fltg|N|GSpD|N|100|N|GS-D
 GS$J|Goldman Sachs Group Inc Depositary Shs Repstg 1/1000th Pfd Ser J Fixed to Fltg Rate|N|GSpJ|N|100|N|GS-J
 GS$K|Goldman Sachs Group, Inc. (The) Dep Shs Repstg 1/1000 Int Sh Fxd/Fltg Non Cum Pfd Stk Ser K|N|GSpK|N|100|N|GS-K
-GS$N|Goldman Sachs Group, Inc. (The) Depositary Shares, Each Representing 1/1,000th Interest in a Share of 6.30% Non-Cumulative Preferred Stock, Series N|N|GSpN|N|100|N|GS-N
 GSAH|GS Acquisition Holdings Corp II Class A Common Stock|N|GSAH|N|100|N|GSAH
 GSAH.U|GS Acquisition Holdings Corp II Units, each consisting of one share of Class A Common Stock and one-quarter of one redeemable Warrant|N|GSAH.U|N|100|N|GSAH=
 GSAH.W|GS Acquisition Holdings Corp II Redeemable Warrants, each whole warrant exercisable for one share of Class A common stock at an exercise price of $11.50|N|GSAH.WS|N|100|N|GSAH+
@@ -2586,7 +2601,6 @@ HOG|Harley-Davidson, Inc. Common Stock|N|HOG|N|100|N|HOG
 HOLD|AdvisorShares Sage Core Reserves ETF|P|HOLD|Y|100|N|HOLD
 HOME|At Home Group Inc. Common Stock|N|HOME|N|100|N|HOME
 HOMZ|Hoya Capital Housing ETF|P|HOMZ|Y|100|N|HOMZ
-HON|Honeywell International Inc. Common Stock|N|HON|N|100|N|HON
 HOV|Hovnanian Enterprises, Inc. Class A Common Stock|N|HOV|N|100|N|HOV
 HP|Helmerich & Payne, Inc. Common Stock|N|HP|N|100|N|HP
 HPE|Hewlett Packard Enterprise Company Common Stock|N|HPE|N|100|N|HPE
@@ -2692,7 +2706,7 @@ IAI|iShares U.S. Broker-Dealers & Securities Exchanges ETF|P|IAI|Y|100|N|IAI
 IAK|iShares U.S. Insurance ETF|P|IAK|Y|100|N|IAK
 IAPR|Innovator MSCI EAFE Power Buffer ETF April|P|IAPR|Y|100|N|IAPR
 IAT|iShares U.S. Regional Banks ETF|P|IAT|Y|100|N|IAT
-IAU|ishares Gold Trust|P|IAU|Y|100|N|IAU
+IAU|iShares Gold Trust Shares of the iShares Gold Trust|P|IAU|Y|100|N|IAU
 IAUF|iShares Gold Strategy ETF|Z|IAUF|Y|100|N|IAUF
 IBA|Industrias Bachoco, S.A.B. de C.V. Common Stock|N|IBA|N|100|N|IBA
 IBCE|iShares iBonds Mar 2023 Term Corporate ex-Financials ETF|P|IBCE|Y|100|N|IBCE
@@ -2826,6 +2840,7 @@ IJUL|Innovator MSCI EAFE Power Buffer ETF - July|P|IJUL|Y|100|N|IJUL
 ILCB|iShares Morningstar Large-Cap ETF|P|ILCB|Y|100|N|ILCB
 ILCG|iShares Morningstar Large-Cap Growth ETF|P|ILCG|Y|100|N|ILCG
 ILCV|iShares Morningstar Large-Cap  Value ETF|P|ILCV|Y|100|N|ILCV
+ILDR|First Trust Innovation Leaders ETF|P|ILDR|Y|100|N|ILDR
 ILF|iShares Latin America 40 ETF|P|ILF|Y|100|N|ILF
 ILTB|iShares Core 10  Year USD Bond ETF|P|ILTB|Y|100|N|ILTB
 IMAX|Imax Corporation Common Stock|N|IMAX|N|100|N|IMAX
@@ -2912,6 +2927,7 @@ IRL|New Ireland Fund, Inc (The) Common Stock|N|IRL|N|100|N|IRL
 IRM|Iron Mountain Incorporated (Delaware)Common Stock REIT|N|IRM|N|100|N|IRM
 IRR|Voya Natural Resources Equity Income Fund Common Shares of Beneficial Interest|N|IRR|N|100|N|IRR
 IRS|IRSA Inversiones Y Representaciones S.A. Common Stock|N|IRS|N|100|N|IRS
+IRS.W|IRSA Inversiones Y Representaciones S.A. Warrants to purchase Common Shares|N|IRS.WS|N|100|N|IRS+
 IRT|Independence Realty Trust, Inc. Common Stock|N|IRT|N|100|N|IRT
 ISCB|iShares Morningstar Small-Cap ETF|P|ISCB|Y|100|N|ISCB
 ISCF|iShares MSCI Intl Small-Cap Multifactor ETF|P|ISCF|Y|100|N|ISCF
@@ -3104,6 +3120,7 @@ JPM$G|J P Morgan Chase & Co Depositary Shares, each representing a 1/400th inter
 JPM$H|J P Morgan Chase & Co Depositary Shares, each representing a 1/400th interest in a share of 6.15% Non-Cumulative Preferred Stock, Series BB|N|JPMpH|N|100|N|JPM-H
 JPM$J|J P Morgan Chase & Co Depositary Shares, each representing a 1/400th interest in a share of JPMorgan Chase & Co. 4.75% Non-Cumulative Preferred Stock, Series GG|N|JPMpJ|N|100|N|JPM-J
 JPM$K|J P Morgan Chase & Co Depositary Shares, each representing a 1/400th interest in a share of 4.55% Non-Cumulative Preferred Stock, Series JJ|N|JPMpK|N|100|N|JPM-K
+JPM$L|J P Morgan Chase & Co Depositary Shares, each representing a 1/400th interest in a share of 4.625% Non-Cumulative Preferred Stock, Series LL|N|JPMpL|N|100|N|JPM-L
 JPMB|JPMorgan USD Emerging Markets Sovereign Bond ETF|P|JPMB|Y|100|N|JPMB
 JPME|JPMorgan Diversified Return U.S. Mid Cap Equity ETF|P|JPME|Y|100|N|JPME
 JPN|Xtrackers Japan JPX-Nikkei 400 Equity ETF|P|JPN|Y|100|N|JPN
@@ -3303,6 +3320,7 @@ LEVI|Levi Strauss & Co Class A Common Stock|N|LEVI|N|100|N|LEVI
 LFC|China Life Insurance Company Limited American Depositary Shares|N|LFC|N|100|N|LFC
 LFEQ|VanEck Vectors Long/Flat Trend ETF|P|LFEQ|Y|100|N|LFEQ
 LFT|Lument Finance Trust, Inc. Common Stock|N|LFT|N|100|N|LFT
+LFT$A|Lument Finance Trust, Inc. 7.875% Series A Cumulative Redeemable Preferred Stock|N|LFTpA|N|100|N|LFT-A
 LGF.A|Lions Gate Entertainment Corporation Class A Voting Shares|N|LGF.A|N|100|N|LGF.A
 LGF.B|Lions Gate Entertainment Corporation Class B Non-Voting Shares|N|LGF.B|N|100|N|LGF.B
 LGH|HCM Defender 500 Index ETF|P|LGH|Y|100|N|LGH
@@ -3311,7 +3329,9 @@ LGL|LGL Group, Inc. (The) Common Stock|A|LGL|N|100|N|LGL
 LGL.W|LGL Group, Inc. (The) Warrants|A|LGL.WS|N|100|N|LGL+
 LGLV|SPDR SSGA US Large Cap Low Volatility Index ETF|P|LGLV|Y|100|N|LGLV
 LGOV|First Trust Long Duration Opportunities ETF|P|LGOV|Y|100|N|LGOV
+LGV|Longview Acquisition Corp. II Class A Common Stock|N|LGV|N|100|N|LGV
 LGV.U|Longview Acquisition Corp. II Units, each consisting of one share of Class A Common Stock and one-fifth of one redeemable Warrant|N|LGV.U|N|100|N|LGV=
+LGV.W|Longview Acquisition Corp. II Redeemable Warrants, each whole Warrant exercisable for one share of Class A Common Stock, each at an exercise price of $11.50 per share|N|LGV.WS|N|100|N|LGV+
 LH|Laboratory Corporation of America Holdings Common Stock|N|LH|N|100|N|LH
 LHC|Leo Holdings Corp. II Class A Ordinary Shares|N|LHC|N|100|N|LHC
 LHC.U|Leo Holdings Corp. II Units, each consisting of one Class A ordinary share and one-third of one redeemable warrant|N|LHC.U|N|100|N|LHC=
@@ -3356,6 +3376,7 @@ LPI|Laredo Petroleum, Inc. Common Stock|N|LPI|N|100|N|LPI
 LPL|LG Display Co, Ltd AMERICAN DEPOSITORY SHARES|N|LPL|N|100|N|LPL
 LPX|Louisiana-Pacific Corporation Common Stock|N|LPX|N|100|N|LPX
 LQD|iShares iBoxx $ Investment Grade Corporate Bond ETF|P|LQD|Y|100|N|LQD
+LQDB|iShares Trust iShares BBB Rated Corporate Bond ETF|P|LQDB|Y|100|N|LQDB
 LQDH|iShares Interest Rate Hedged Corporate Bond ETF|P|LQDH|Y|100|N|LQDH
 LQDI|iShares Inflation Hedged Corporate Bond ETF|Z|LQDI|Y|100|N|LQDI
 LRGF|iShares MSCI USA Multifactor ETF|P|LRGF|Y|100|N|LRGF
@@ -3524,6 +3545,7 @@ MIY|Blackrock MuniYield Michigan Quality Fund, Inc. Common Stock|N|MIY|N|100|N|M
 MJ|ETFMG Alternative Harvest ETF|P|MJ|Y|100|N|MJ
 MJJ|MicroSectors Cannabis ETNs|P|MJJ|Y|100|N|MJJ
 MJO|MicroSectors Cannabis 2X Leveraged ETNs|P|MJO|Y|100|N|MJO
+MJUS|ETFMG U.S. Alternative Harvest ETF|P|MJUS|Y|100|N|MJUS
 MKC|McCormick & Company, Incorporated Common Stock|N|MKC|N|100|N|MKC
 MKC.V|McCormick & Company, Incorporated Common Stock|N|MKC.V|N|100|N|MKC.V
 MKL|Markel Corporation Common Stock|N|MKL|N|10|N|MKL
@@ -3594,6 +3616,7 @@ MRAD|SmartETFs Advertising & Marketing Technology ETF|P|MRAD|Y|100|N|MRAD
 MRC|MRC Global Inc. Common Stock|N|MRC|N|100|N|MRC
 MRGR|ProShares Merger ETF|Z|MRGR|Y|100|N|MRGR
 MRK|Merck & Company, Inc. Common Stock (new)|N|MRK|N|100|N|MRK
+MRK.V|Merck & Company, Inc. Common Stock Ex-Distribution When Issued|N|MRKw|N|100|N|MRK#
 MRO|Marathon Oil Corporation Common Stock|N|MRO|N|100|N|MRO
 MRSK|Toews Agility Shares Managed Risk ETF|Z|MRSK|Y|100|N|MRSK
 MS|Morgan Stanley Common Stock|N|MS|N|100|N|MS
@@ -3699,6 +3722,7 @@ NBHC|National Bank Holdings Corporation Common Stock|N|NBHC|N|100|N|NBHC
 NBO|Neuberger Berman New York Municipal Fund Inc. Common Stock|A|NBO|N|100|N|NBO
 NBR|Nabors Industries Ltd.|N|NBR|N|100|N|NBR
 NBW|Neuberger Berman California Municipal Fund Inc Common Stock|A|NBW|N|100|N|NBW
+NBXG|Neuberger Berman Next Generation Connectivity Fund Inc. Common Stock|N|NBXG|N|100|N|NBXG
 NBY|NovaBay Pharmaceuticals, Inc. Common Stock|A|NBY|N|100|N|NBY
 NC|NACCO Industries, Inc. Common Stock|N|NC|N|100|N|NC
 NCA|Nuveen California Municipal Value Fund|N|NCA|N|100|N|NCA
@@ -3729,6 +3753,7 @@ NETL|NETLease Corporate Real Estate ETF|P|NETL|Y|100|N|NETL
 NEU|NewMarket Corp Common Stock|N|NEU|N|100|N|NEU
 NEV|Nuveen Enhanced Municipal Value Fund Common Shares of Beneficial Interest|N|NEV|N|100|N|NEV
 NEW|Puxin Limited American Depositary Shares, each representing two Ordinary Shares|N|NEW|N|100|N|NEW
+NEWP|New Pacific Metals Corp. Common Shares|A|NEWP|N|100|N|NEWP
 NEWR|New Relic, Inc. Common Stock|N|NEWR|N|100|N|NEWR
 NEX|NexTier Oilfield Solutions Inc. Common Stock|N|NEX|N|100|N|NEX
 NEXA|Nexa Resources S.A. Common Shares|N|NEXA|N|100|N|NEXA
@@ -3742,7 +3767,9 @@ NG|Novagold Resources Inc.|A|NG|N|100|N|NG
 NGAB|Northern Genesis Acquisition Corp. II Common Stock|N|NGAB|N|100|N|NGAB
 NGAB.U|Northern Genesis Acquisition Corp. II Units, each consisting of one share of common stock and one-third of one redeemable warrant|N|NGAB.U|N|100|N|NGAB=
 NGAB.W|Northern Genesis Acquisition Corp. II Redeemable Warrants, each whole warrant exercisable for shares of common stock at an exercise price of $11.50 per share|N|NGAB.WS|N|100|N|NGAB+
+NGC|Northern Genesis Acquisition Corp. III Common Stock|N|NGC|N|100|N|NGC
 NGC.U|Northern Genesis Acquisition Corp. III Units, each consisting of one share of common stock and one-quarter of one redeemable warrant|N|NGC.U|N|100|N|NGC=
+NGC.W|Northern Genesis Acquisition Corp. III Redeemable Warrants, each whole warrant exercisable for shares of common stock at an exercise price of $11.50 per share|N|NGC.WS|N|100|N|NGC+
 NGD|New Gold Inc.|A|NGD|N|100|N|NGD
 NGE|Global X MSCI Nigeria ETF|P|NGE|Y|100|N|NGE
 NGG|National Grid Transco, PLC National Grid PLC (NEW) American Depositary Shares|N|NGG|N|100|N|NGG
@@ -3786,6 +3813,7 @@ NM|Navios Maritime Holdings Inc. Common Stock|N|NM|N|100|N|NM
 NM$G|Navios Maritime Holdings Inc. Sponsored ADR Representing 1/100th Perpetual Preferred Series G (Marshall Islands)|N|NMpG|N|100|N|NM-G
 NM$H|Navios Maritime Holdings Inc. Sponsored ADR Representing 1/100th Perp. Preferred Series H%|N|NMpH|N|100|N|NM-H
 NMCO|Nuveen Municipal Credit Opportunities Fund Common Shares|N|NMCO|N|100|N|NMCO
+NMG|Nouveau Monde Graphite Inc. Common Shares|N|NMG|N|100|N|NMG
 NMI|Nuveen Municipal Income Fund, Inc. Common Stock|N|NMI|N|100|N|NMI
 NMK$B|Niagara Mohawk Holdings, Inc. Preferred Stock|N|NMKpB|N|10|N|NMK-B
 NMK$C|Niagara Mohawk Holdings, Inc. Preferred Stock|N|NMKpC|N|10|N|NMK-C
@@ -3849,7 +3877,6 @@ NSH.U|NavSight Holdings, Inc. Units, each consisting of one share of Class A Com
 NSH.W|NavSight Holdings, Inc. Warrants, each whole warrant exercisable for one share of Class A Common Stock at an exercise price of $11.50 per whole share|N|NSH.WS|N|100|N|NSH+
 NSL|Nuveen Senior Income Fund Common Stock|N|NSL|N|100|N|NSL
 NSP|Insperity, Inc. Common Stock|N|NSP|N|100|N|NSP
-NSPR|InspireMD Inc. Common Stock|A|NSPR|N|100|N|NSPR
 NSPR.B|InspireMD, Inc. Series B Warrants, (Expiring March 14, 2022)|A|NSPR.WS.B|N|100|N|NSPR+B
 NSPR.W|InspireMD, Inc. Warrants|A|NSPR.WS|N|100|N|NSPR+
 NSS|NuStar Logistics, L.P. 7.625% Fixed-to-Floating Rate Subordinated Notes due 2043|N|NSS|N|100|N|NSS
@@ -3872,8 +3899,10 @@ NTG|Tortoise Midstream Energy Fund, Inc. Common Stock|N|NTG|N|100|N|NTG
 NTIP|Network-1 Technologies, Inc. Common Stock|A|NTIP|N|100|N|NTIP
 NTP|Nam Tai Property Inc. Common Stock|N|NTP|N|100|N|NTP
 NTR|Nutrien Ltd. Common Shares|N|NTR|N|100|N|NTR
+NTSE|WisdomTree Trust WisdomTree Emerging Markets Efficient Core Fund|P|NTSE|Y|100|N|NTSE
+NTSI|WisdomTree Trust WisdomTree International Efficient Core Fund|P|NTSI|Y|100|N|NTSI
 NTST|NetSTREIT Corp. Common Stock|N|NTST|N|100|N|NTST
-NTSX|WisdomTree 90/60 U.S. Balanced Fund|P|NTSX|Y|100|N|NTSX
+NTSX|WisdomTree U.S. Efficient Core Fund|P|NTSX|Y|100|N|NTSX
 NTZ|Natuzzi, S.p.A.|N|NTZ|N|100|N|NTZ
 NUAG|Nuveen Enhanced Yield U.S. Aggregate Bond ETF|P|NUAG|Y|100|N|NUAG
 NUBD|Nuveen ESG U.S. Aggregate Bond ETF|P|NUBD|Y|100|N|NUBD
@@ -3957,6 +3986,7 @@ OGCP|Empire State Realty OP, L.P. Series 60 Operating Partnership Units Represen
 OGE|OGE Energy Corp Common Stock|N|OGE|N|100|N|OGE
 OGEN|Oragenics Inc. Common Stock|A|OGEN|N|100|N|OGEN
 OGIG|O'Shares Global Internet Giants ETF|Z|OGIG|Y|100|N|OGIG
+OGN.V|Organon & Co. Common Stock When Issued|N|OGNw|N|100|N|OGN#
 OGS|ONE Gas, Inc. Common Stock|N|OGS|N|100|N|OGS
 OHI|Omega Healthcare Investors, Inc. Common Stock|N|OHI|N|100|N|OHI
 OI|O-I Glass, Inc. Common Stock|N|OI|N|100|N|OI
@@ -3985,7 +4015,9 @@ ONOF|Global X Adaptive U.S. Risk Management ETF|P|ONOF|Y|100|N|ONOF
 ONTF|ON24, Inc. Common Stock|N|ONTF|N|100|N|ONTF
 ONTO|Onto Innovation Inc. Common Stock|N|ONTO|N|100|N|ONTO
 OOMA|Ooma, Inc. Common Stock|N|OOMA|N|100|N|OOMA
+OPA|Magnum Opus Acquisition Limited Class A Ordinary Shares|N|OPA|N|100|N|OPA
 OPA.U|Magnum Opus Acquisition Limited Units, each consisting of one Class A ordinary share and one-half redeemable warrant|N|OPA.U|N|100|N|OPA=
+OPA.W|Magnum Opus Acquisition Limited Redeemable Warrants, each warrant exercisable for one Class A ordinary share at an exercise price of $11.50|N|OPA.WS|N|100|N|OPA+
 OPER|ETF Series Solutions ETF ClearShares Ultra-Short Maturity ETF|P|OPER|Y|100|N|OPER
 OPP|RiverNorth/DoubleLine Strategic Opportunity Fund, Inc. Common Stock|N|OPP|N|100|N|OPP
 OPP$A|RiverNorth/DoubleLine Strategic Opportunity Fund, Inc. 4.375% Series A Cumulative Preferred Stock|N|OPPpA|N|100|N|OPP-A
@@ -4004,6 +4036,7 @@ OSCR|Oscar Health, Inc. Class A Common Stock|N|OSCR|N|100|N|OSCR
 OSCV|Opus Small Cap Value ETF|Z|OSCV|Y|100|N|OSCV
 OSG|Overseas Shipholding Group, Inc. Class A Common Stock|N|OSG|N|100|N|OSG
 OSH|Oak Street Health, Inc. Common Stock|N|OSH|N|100|N|OSH
+OSI.U|Osiris Acquisition Corp. Units, each consisting of one share of Class A common stock, and one-half of one redeemable warrant|N|OSI.U|N|100|N|OSI=
 OSK|Oshkosh Corporation (Holding Company)Common Stock|N|OSK|N|100|N|OSK
 OTIS|Otis Worldwide Corporation Common Stock |N|OTIS|N|100|N|OTIS
 OUNZ|VanEck Merk Gold Trust|P|OUNZ|Y|100|N|OUNZ
@@ -4020,6 +4053,8 @@ OVM|Overlay Shares Municipal Bond ETF|P|OVM|Y|100|N|OVM
 OVS|Overlay Shares Small Cap Equity ETF|P|OVS|Y|100|N|OVS
 OVT|Overlay Shares Short Term Bond ETF|P|OVT|Y|100|N|OVT
 OVV|Ovintiv Inc. (DE)|N|OVV|N|100|N|OVV
+OWL|Blue Owl Capital Inc. Class A Common Stock|N|OWL|N|100|N|OWL
+OWL.W|Blue Owl Capital Inc. Redeemable Warrants|N|OWL.WS|N|100|N|OWL+
 OXM|Oxford Industries, Inc. Common Stock|N|OXM|N|100|N|OXM
 OXY|Occidental Petroleum Corporation Common Stock|N|OXY|N|100|N|OXY
 OXY.W|Occidental Petroleum Corporation Warrants |N|OXY.WS|N|100|N|OXY+
@@ -4045,6 +4080,7 @@ PATH|UiPath, Inc. Class A Common Stock|N|PATH|N|100|N|PATH
 PAUG|Innovator S&P 500 Power Buffer ETF - August|Z|PAUG|Y|100|N|PAUG
 PAVE|Global X Funds Global X U.S. Infrastructure Development ETF|Z|PAVE|Y|100|N|PAVE
 PAWZ|ProShares Pet Care ETF|Z|PAWZ|Y|100|N|PAWZ
+PAY|Paymentus Holdings, Inc. Class A Common Stock|N|PAY|N|100|N|PAY
 PAYC|Paycom Software, Inc. Common Stock|N|PAYC|N|100|N|PAYC
 PB|Prosperity Bancshares, Inc. Common Stock|N|PB|N|100|N|PB
 PBA|Pembina Pipeline Corp. Ordinary Shares (Canada)|N|PBA|N|100|N|PBA
@@ -4086,6 +4122,7 @@ PCI|PIMCO Dynamic Credit and Mortgage Income Fund Common Shares of Beneficial In
 PCK|Pimco California Municipal Income Fund II Common Shares of Beneficial Interest|N|PCK|N|100|N|PCK
 PCM|PCM Fund, Inc. Common Stock|N|PCM|N|100|N|PCM
 PCN|Pimco Corporate & Income Strategy Fund Common Stock|N|PCN|N|100|N|PCN
+PCOR|Procore Technologies, Inc. Common Stock|N|PCOR|N|100|N|PCOR
 PCPC|Periphas Capital Partnering Corporation Class A Common Stock|N|PCPC|N|100|N|PCPC
 PCPC.U|Periphas Capital Partnering Corporation CAPS, each consisting of one share of Class A common stock and one-quarter of one redeemable warrant|N|PCPC.U|N|100|N|PCPC=
 PCPC.W|Periphas Capital Partnering Corporation Warrants|N|PCPC.WS|N|100|N|PCPC+
@@ -4111,6 +4148,7 @@ PEB$C|Pebblebrook Hotel Trust 6.50% Series C Cumulative Redeemable Preferred Sha
 PEB$D|Pebblebrook Hotel Trust 6.375% Series D Cumulative Redeemable Preferred Shares of Beneficial Interest|N|PEBpD|N|100|N|PEB-D
 PEB$E|Pebblebrook Hotel Trust 6.375% Series E Cumulative Redeemable Preferred Shares of Beneficial Interest|N|PEBpE|N|100|N|PEB-E
 PEB$F|Pebblebrook Hotel Trust 6.3% Series F Cumulative Redeemable Preferred Shares of Beneficial Interest|N|PEBpF|N|100|N|PEB-F
+PEB$G|Pebblebrook Hotel Trust 6.375% Series G Cumulative Redeemable Preferred Shares of Beneficial Interest|N|PEBpG|N|100|N|PEB-G
 PED|Pedevco Corp. Common Stock|A|PED|N|100|N|PED
 PEG|Public Service Enterprise Group Incorporated Common Stock|N|PEG|N|100|N|PEG
 PEI|Pennsylvania Real Estate Investment Trust Common Stock|N|PEI|N|100|N|PEI
@@ -4133,12 +4171,14 @@ PFFV|Global X Variable Rate Preferred ETF|P|PFFV|Y|100|N|PFFV
 PFGC|Performance Food Group Company Common Stock|N|PFGC|N|100|N|PFGC
 PFH|Prudential Financial, Inc. 4.125% Junior Subordinated Notes due 2060|N|PFH|N|100|N|PFH
 PFIG|Invesco Fundamental Investment Grade Corporate Bond  ETF|P|PFIG|Y|100|N|PFIG
+PFIX|Simplify Interest Rate Hedge ETF|P|PFIX|Y|100|N|PFIX
 PFL|PIMCO Income Strategy Fund Shares of Beneficial Interest|N|PFL|N|100|N|PFL
 PFLD|AAM Low Duration Preferred and Income Securities ETF|P|PFLD|Y|100|N|PFLD
 PFN|PIMCO Income Strategy Fund II|N|PFN|N|100|N|PFN
 PFO|Flaherty & Crumrine Preferred and Income Opportunity Fund Incorporated|N|PFO|N|100|N|PFO
 PFS|Provident Financial Services, Inc Common Stock|N|PFS|N|100|N|PFS
 PFSI|PennyMac Financial Services, Inc. Common Stock|N|PFSI|N|100|N|PFSI
+PFUT|Putnam Sustainable Future ETF|P|PFUT|Y|100|N|PFUT
 PFXF|VanEck Vectors Preferred Securities ex Financials ETF|P|PFXF|Y|100|N|PFXF
 PG|Procter & Gamble Company (The) Common Stock|N|PG|N|100|N|PG
 PGAL|Global X MSCI Portugal ETF|P|PGAL|Y|100|N|PGAL
@@ -4148,6 +4188,7 @@ PGM|iPathA Series B Bloomberg Platinum Subindex Total Return ETN|P|PGM|N|100|N|P
 PGP|Pimco Global Stocksplus & Income Fund Pimco Global StocksPlus & Income Fund Common Shares of Beneficial Interest|N|PGP|N|100|N|PGP
 PGR|Progressive Corporation (The) Common Stock|N|PGR|N|100|N|PGR
 PGRE|Paramount Group, Inc. Common Stock|N|PGRE|N|100|N|PGRE
+PGRO|Putnam Focused Large Cap Growth ETF|P|PGRO|Y|100|N|PGRO
 PGTI|PGT Innovations, Inc.|N|PGTI|N|100|N|PGTI
 PGX|Invesco Preferred ETF|P|PGX|Y|100|N|PGX
 PGZ|Principal Real Estate Income Fund Common Shares of Beneficial Interest|N|PGZ|N|100|N|PGZ
@@ -4175,6 +4216,7 @@ PICC|Pivotal Investment Corporation III Class A Common Stock|N|PICC|N|100|N|PICC
 PICC.U|Pivotal Investment Corporation III Units, each consisting of one share of Class A common stock and one-fifth of one redeemable warrant|N|PICC.U|N|100|N|PICC=
 PICC.W|Pivotal Investment Corporation III Redeemable Warrants, each whole warrant exercisable for shares of Class A common stock at an exercise price of $11.50 per share|N|PICC.WS|N|100|N|PICC+
 PICK|iShares MSCI Global Select Metals & Mining Producers Fund|Z|PICK|Y|100|N|PICK
+PIFI|ClearShares Piton Intermediate Fixed income ETF|P|PIFI|Y|100|N|PIFI
 PII|Polaris Inc. Common Stock|N|PII|N|100|N|PII
 PILL|Direxion Daily Pharmaceutical & Medical Bull 3X Shares|P|PILL|Y|100|N|PILL
 PIM|Putnam Master Intermediate Income Trust Common Stock|N|PIM|N|100|N|PIM
@@ -4202,11 +4244,13 @@ PLAG|Planet Green Holdings Corp. Common Stock|A|PLAG|N|100|N|PLAG
 PLAN|Anaplan, Inc. Common Stock|N|PLAN|N|100|N|PLAN
 PLAT|WisdomTree Growth Leaders Fund|P|PLAT|Y|100|N|PLAT
 PLD|Prologis, Inc. Common Stock|N|PLD|N|100|N|PLD
+PLDR|Putnam Sustainable Leaders ETF|P|PLDR|Y|100|N|PLDR
 PLG|Platinum Group Metals Ltd. Ordinary Shares (Canada)|A|PLG|N|100|N|PLG
 PLM|Polymet Mining Corporation Ordinary Shares (Canada)|A|PLM|N|100|N|PLM
 PLNT|Planet Fitness, Inc. Common Stock|N|PLNT|N|100|N|PLNT
 PLOW|Douglas Dynamics, Inc. Common Stock|N|PLOW|N|100|N|PLOW
-PLT|Plantronics, Inc. Common Stock|N|PLT|N|100|N|PLT
+PLRG|Principal U.S. Large-Cap Adaptive Multi-Factor ETF|Z|PLRG|Y|100|N|PLRG
+PLTL|Principal U.S. Small-Cap Adaptive Multi-Factor ETF|Z|PLTL|Y|100|N|PLTL
 PLTM|GraniteShares Platinum Shares ETF|P|PLTM|Y|100|N|PLTM
 PLTR|Palantir Technologies Inc. Class A Common Stock|N|PLTR|N|100|N|PLTR
 PLX|Protalix BioTherapeutics, Inc. (DE) Common Stock|A|PLX|N|100|N|PLX
@@ -4238,6 +4282,8 @@ PNTM.U|Pontem Corporation Units, each consisting of one Class A ordinary share, 
 PNTM.W|Pontem Corporation Warrants, each whole warrant exercisable for one Class A ordinary share at an exercise price of $11.50|N|PNTM.WS|N|100|N|PNTM+
 PNW|Pinnacle West Capital Corporation Common Stock|N|PNW|N|100|N|PNW
 POCT|Innovator S&P 500 Power Buffer ETF - October|Z|POCT|Y|100|N|POCT
+POLY|Plantronics, Inc. Common Stock|N|POLY|N|100|N|POLY
+POND.U|Angel Pond Holdings Corporation Units, each consisting of one Class A ordinary share and one-third of one redeemable warrant|N|POND.U|N|100|N|POND=
 POR|Portland General Electric Co Common Stock|N|POR|N|100|N|POR
 POST|Post Holdings, Inc. Common Stock|N|POST|N|100|N|POST
 PPA|Invesco Aerospace & Defense ETF |P|PPA|Y|100|N|PPA
@@ -4267,6 +4313,7 @@ PRIF$D|Priority Income Fund, Inc. 7.00% Series D Term Preferred Stock due 2029|N
 PRIF$E|Priority Income Fund, Inc. 6.375% Series E Preferred Stock Due 2024|N|PRIFpE|N|100|N|PRIF-E
 PRIF$F|Priority Income Fund, Inc. 6.625% Series F Term Preferred Stock due 2027|N|PRIFpF|N|100|N|PRIF-F
 PRIF$G|Priority Income Fund, Inc. 6.25% Series G Preferred Stock Due 2026|N|PRIFpG|N|100|N|PRIF-G
+PRIF$H|Priority Income Fund, Inc. 6.00% Series H Term Preferred Stock due 2026|N|PRIFpH|N|100|N|PRIF-H
 PRK|Park National Corporation Common Stock|A|PRK|N|100|N|PRK
 PRLB|Proto Labs, Inc. Common stock|N|PRLB|N|100|N|PRLB
 PRMW|Primo Water Corporation Common Stock|N|PRMW|N|100|N|PRMW
@@ -4297,7 +4344,7 @@ PSA$L|Public Storage Depositary Shares Each Representing 1/1,000 of a 4.625% Cum
 PSA$M|Public Storage Depositary Shares Each Representing 1/1,000 of a 4.125% Cumulative Preferred Share of Beneficial Interest, Series M|N|PSApM|N|100|N|PSA-M
 PSA$N|Public Storage Depositary Shares Each Representing 1/1,000 of a 3.875% Cumulative Preferred Share of Beneficial Interest, Series N|N|PSApN|N|100|N|PSA-N
 PSA$O|Public Storage Depositary Shares Each Representing 1/1,000 of a 3.900% Cumulative Preferred Share of Beneficial Interest, Series O|N|PSApO|N|100|N|PSA-O
-PSB|PS Business Parks, Inc. Common Stock|N|PSB|N|100|N|PSB
+PSB|PS Business Parks, Inc. (MD) Common Stock|N|PSB|N|100|N|PSB
 PSB$W|PS Business Parks, Inc. Depositary Shares Each Representing 1/1000 of a Share of 5.20% Cumulative Preferred Stock, Series W|N|PSBpW|N|100|N|PSB-W
 PSB$X|PS Business Parks, Inc. Depositary Shares Each Representing 1/1,000 of a Share of 5.25% Cumulative Preferred Stock, Series X|N|PSBpX|N|100|N|PSB-X
 PSB$Y|PS Business Parks, Inc. 5.20% Cumulative Preferred Stock, Series Y|N|PSBpY|N|100|N|PSB-Y
@@ -4324,6 +4371,7 @@ PSMR|Pacer Swan SOS Moderate (April) ETF|Z|PSMR|Y|100|N|PSMR
 PSN|Parsons Corporation Common Stock|N|PSN|N|100|N|PSN
 PSO|Pearson, Plc Common Stock|N|PSO|N|100|N|PSO
 PSP|Invesco Global Listed Private Equity ETF|P|PSP|Y|100|N|PSP
+PSPC.U|Post Holdings Partnering Corporation Units, each consisting of one share of Series A common stock, and one-third of one redeemable warrant|N|PSPC.U|N|100|N|PSPC=
 PSQ|ProShares Short QQQ|P|PSQ|Y|100|N|PSQ
 PSR|Invesco Active U.S. Real Estate Fund|P|PSR|Y|100|N|PSR
 PST|ProShares UltraShort Lehman 7-10 Year Treasury|P|PST|Y|100|N|PST
@@ -4333,6 +4381,7 @@ PSTH.W|Pershing Square Tontine Holdings, Ltd. Warrants, exercisable for one shar
 PSTL|Postal Realty Trust, Inc. Class A Common Stock|N|PSTL|N|100|N|PSTL
 PSX|Phillips 66 Common Stock|N|PSX|N|100|N|PSX
 PSXP|Phillips 66 Partners LP Common Units representing limited partner interest in the Partnership|N|PSXP|N|100|N|PSXP
+PSY|Defiance Next Gen Altered Experience ETF|P|PSY|Y|100|N|PSY
 PTA|Cohen & Steers Tax-Advantaged Preferred Securities and Income Fund Common Shares of Beneficial Interest|N|PTA|N|100|N|PTA
 PTBD|Pacer Trendpilot US Bond ETF|P|PTBD|Y|100|N|PTBD
 PTEU|Pacer TrendpilotTM European Index ETF|Z|PTEU|Y|100|N|PTEU
@@ -4355,6 +4404,7 @@ PUTW|WisdomTree CBOE S&P 500 PutWrite Strategy Fund|P|PUTW|Y|100|N|PUTW
 PV|Primavera Capital Acquisition Corporation Class A Ordinary Shares|N|PV|N|100|N|PV
 PV.U|Primavera Capital Acquisition Corporation Units, each consisting of one Class A ordinary share and one-half of one redeemable warrant|N|PV.U|N|100|N|PV=
 PV.W|Primavera Capital Acquisition Corporation Redeemable Warrants, each whole warrant exercisable for one Class A ordinary share at an exercise price of $11.50|N|PV.WS|N|100|N|PV+
+PVAL|Putnam Focused Large Cap Value ETF|P|PVAL|Y|100|N|PVAL
 PVG|Pretium Resources, Inc. Ordinary Shares (Canada)|N|PVG|N|100|N|PVG
 PVH|PVH Corp. Common Stock|N|PVH|N|100|N|PVH
 PVI|Invesco VRDO Tax-Free ETF|P|PVI|Y|100|N|PVI
@@ -4373,6 +4423,7 @@ PXF|Invesco FTSE RAFI Developed Markets ex-U.S. ETF|P|PXF|Y|100|N|PXF
 PXH|Invesco FTSE RAFI Emerging Markets ETF|P|PXH|Y|100|N|PXH
 PXJ|Invesco Dynamic Oil & Gas Services ETF|P|PXJ|Y|100|N|PXJ
 PXQ|Invesco Dynamic Networking ETF|P|PXQ|Y|100|N|PXQ
+PXUS|Principal International Adaptive Multi-Factor ETF|Z|PXUS|Y|100|N|PXUS
 PYN|PIMCO New York Municipal Income Fund III Common Shares of Beneficial Interest|N|PYN|N|100|N|PYN
 PYPE|ETRACS NYSE Pickens Core Midstream Index ETN due August 20, 2048|P|PYPE|N|100|N|PYPE
 PYS|Merrill Lynch Depositor Inc PPlus Tr Ser RRD-1 Tr Ctf Cl A|N|PYS|N|100|N|PYS
@@ -4548,7 +4599,9 @@ RJI|AB Svensk Ekportkredit (Swedish Export Credit Corporation) ELEMENTS Linked t
 RJN|AB Svensk Ekportkredit (Swedish Export Credit Corporation) ELEMENTS Linked to the Rogers International Commodity Index - Energy Total Return Structured Product|P|RJN|N|100|N|RJN
 RJZ|AB Svensk Ekportkredit (Swedish Export Credit Corporation) ELEMENTS Linked to the Rogers International Commodity Index - Metals Total Return Structured Product|P|RJZ|N|100|N|RJZ
 RKT|Rocket Companies, Inc. Class A Common Stock|N|RKT|N|100|N|RKT
+RKTA|Rocket Internet Growth Opportunities Corp. Class A Ordinary Shares|N|RKTA|N|100|N|RKTA
 RKTA.U|Rocket Internet Growth Opportunities Corp. Units, each consisting of one Class A ordinary share and one-fourth of one redeemable warrant|N|RKTA.U|N|100|N|RKTA=
+RKTA.W|Rocket Internet Growth Opportunities Corp. Warrants, each whole warrant exercisable for one Class A ordinary share at an exercise price of $11.50 per share|N|RKTA.WS|N|100|N|RKTA+
 RL|Ralph Lauren Corporation Common Stock|N|RL|N|100|N|RL
 RLGT|Radiant Logistics, Inc. Common Stock|A|RLGT|N|100|N|RLGT
 RLGY|Realogy Holdings Corp. Common Stock|N|RLGY|N|100|N|RLGY
@@ -4625,7 +4678,6 @@ RVI|Retail Value Inc. Common Stock |N|RVI|N|100|N|RVI
 RVLV|Revolve Group, Inc. Class A Common Stock|N|RVLV|N|100|N|RVLV
 RVNU|Xtrackers Municipal Infrastructure Revenue Bond ETF|P|RVNU|Y|100|N|RVNU
 RVP|Retractable Technologies, Inc. Common Stock|A|RVP|N|100|N|RVP
-RVRS|Reverse Cap Weighted US Large Cap ETF |Z|RVRS|Y|100|N|RVRS
 RVT|Royce Value Trust, Inc. Common Stock|N|RVT|N|100|N|RVT
 RWGV|Direxion Russell 1000 Growth Over Value ETF|P|RWGV|Y|100|N|RWGV
 RWJ|Invesco Exchange-Traded Fund Trust II Invesco S&P SmallCap 600 Revenue ETF|P|RWJ|Y|100|N|RWJ
@@ -4808,6 +4860,7 @@ SHM|SPDR Nuveen Bloomberg Barclays Short Term Municipal Bond ETF|P|SHM|Y|100|N|S
 SHO|Sunstone Hotel Investors, Inc. Sunstone Hotel Investors, Inc. Common Shares|N|SHO|N|100|N|SHO
 SHO$E|Sunstone Hotel Investors, Inc. 6.950% Series E Cumulative Redeemable Preferred Stock|N|SHOpE|N|100|N|SHO-E
 SHO$F|Sunstone Hotel Investors, Inc. 6.450% Series F Cumulative Redeemable Preferred Stock|N|SHOpF|N|100|N|SHO-F
+SHO$H|Sunstone Hotel Investors, Inc. 6.125% Series H Cumulative Redeemable Preferred Stock|N|SHOpH|N|100|N|SHO-H
 SHOP|Shopify Inc. Class A Subordinate Voting Shares|N|SHOP|N|100|N|SHOP
 SHW|Sherwin-Williams Company (The) Common Stock|N|SHW|N|100|N|SHW
 SHYD|VanEck Vectors ETF Trust VanEck Vectors Short High Yield Muni ETF|Z|SHYD|Y|100|N|SHYD
@@ -4889,6 +4942,7 @@ SMN|ProShares UltraShort Basic Materials|P|SMN|Y|100|N|SMN
 SMOG|VanEck Vectors Low Carbon Energy ETF|P|SMOG|Y|100|N|SMOG
 SMP|Standard Motor Products, Inc. Common Stock|N|SMP|N|100|N|SMP
 SMTS|Sierra Metals Inc. Common Stock|A|SMTS|N|100|N|SMTS
+SMWB|Similarweb Ltd. Ordinary Shares|N|SMWB|N|100|N|SMWB
 SNA|Snap-On Incorporated Common Stock|N|SNA|N|100|N|SNA
 SNAP|Snap Inc. Class A Common Stock|N|SNAP|N|100|N|SNAP
 SNDR|Schneider National, Inc. Common Stock|N|SNDR|N|100|N|SNDR
@@ -4913,6 +4967,7 @@ SOAC|Sustainable Opportunities Acquisition Corp. Class A Ordinary Shares|N|SOAC|
 SOAC.U|Sustainable Opportunities Acquisition Corp. Units, each consisting of one Class A ordinary share and one-half of one redeemable warrant|N|SOAC.U|N|100|N|SOAC=
 SOAC.W|Sustainable Opportunities Acquisition Corp. Warrants, each whole warrant exercisable for one Class A ordinary share at an exercise price of $11.50|N|SOAC.WS|N|100|N|SOAC+
 SOGO|Sogou Inc. American Depositary Shares, each representing one Class A Ordinary Share|N|SOGO|N|100|N|SOGO
+SOGU|The Short De-SPAC ETF|P|SOGU|Y|100|N|SOGU
 SOI|Solaris Oilfield Infrastructure, Inc. Class A Common Stock|N|SOI|N|100|N|SOI
 SOJB|Southern Company (The) Series 2016A 5.25% Junior Subordinated Notes due October 1, 2076|N|SOJB|N|100|N|SOJB
 SOJC|Southern Company (The) Series 2017B 5.25% Junior Subordinated Notes due December 1, 2077|N|SOJC|N|100|N|SOJC
@@ -5016,6 +5071,7 @@ SQ|Square, Inc. Class A Common Stock|N|SQ|N|100|N|SQ
 SQEW|LeaderShares Equity Skew ETF|P|SQEW|Y|100|N|SQEW
 SQM|Sociedad Quimica y Minera S.A. Common Stock|N|SQM|N|100|N|SQM
 SQNS|Sequans Communications S.A. American Depositary Shares|N|SQNS|N|100|N|SQNS
+SQSP|Squarespace, Inc. Class A Common Stock|N|SQSP|N|100|N|SQSP
 SQZ|SQZ Biotechnologies Company Common Stock|N|SQZ|N|100|N|SQZ
 SR|Spire Inc. Common Stock|N|SR|N|100|N|SR
 SR$A|Spire Inc. Depositary Shares, each representing a 1/1,000th interest in a share of 5.90% Series A Cumulative Redeemable Perpetual Preferred Stock|N|SRpA|N|100|N|SR-A
@@ -5078,7 +5134,9 @@ STPC|Star Peak Corp II Class A Common Stock|N|STPC|N|100|N|STPC
 STPC.U|Star Peak Corp II Units, each consisting of one share of Class A common stock and one-fourth of one redeemable warrant|N|STPC.U|N|100|N|STPC=
 STPC.W|Star Peak Corp II Warrants, each whole warrant exercisable for one share of Class A common stock at an exercise price of $11.50|N|STPC.WS|N|100|N|STPC+
 STPZ|PIMCO 1-5 Year U.S. TIPS Index Exchange-Traded Fund|P|STPZ|Y|100|N|STPZ
+STRE|Supernova Partners Acquisition Company III, Ltd. Class A Ordinary Shares|N|STRE|N|100|N|STRE
 STRE.U|Supernova Partners Acquisition Company III, Ltd. Units|N|STRE.U|N|100|N|STRE=
+STRE.W|Supernova Partners Acquisition Company III, Ltd. Redeemable warrants, each whole warrant exercisable for one Class A ordinary share at an exercise price of $11.50|N|STRE.WS|N|100|N|STRE+
 STSB|iShares Factors US Small Blend Style ETF|Z|STSB|Y|100|N|STSB
 STT|State Street Corporation Common Stock|N|STT|N|100|N|STT
 STT$D|State Street Corporation Depositary Shares representing 1/4000th Perpetual Preferred Series D|N|STTpD|N|100|N|STT-D
@@ -5100,6 +5158,7 @@ SUSA|iShares MSCI USA ESG Select ETF|P|SUSA|Y|100|N|SUSA
 SUZ|Suzano S.A. American Depositary Shares (each representing One Ordinary Share)|N|SUZ|N|100|N|SUZ
 SVAL|iShares US Small Cap Value Factor ETF|Z|SVAL|Y|100|N|SVAL
 SVM|Silvercorp Metals Inc. Common Shares|A|SVM|N|100|N|SVM
+SVOL|Simplify Volatility Premium ETF|P|SVOL|Y|100|N|SVOL
 SVT|Servotronics, Inc. Common Stock|A|SVT|N|100|N|SVT
 SVXY|ProShares Short VIX Short Term Futures ETF|Z|SVXY|Y|100|N|SVXY
 SWAN|Amplify ETF Trust Amplify BlackSwan Growth & Treasury Core ETF|P|SWAN|Y|100|N|SWAN
@@ -5116,6 +5175,7 @@ SWX|Southwest Gas Holdings, Inc. Common Stock (DE)|N|SWX|N|100|N|SWX
 SWZ|Swiss Helvetia Fund, Inc. (The) Common Stock|N|SWZ|N|100|N|SWZ
 SXC|SunCoke Energy, Inc. Common Stock|N|SXC|N|100|N|SXC
 SXI|Standex International Corporation Common Stock|N|SXI|N|100|N|SXI
+SXQG|6 Meridian Quality Growth ETF|P|SXQG|Y|100|N|SXQG
 SXT|Sensient Technologies Corporation Common Stock|N|SXT|N|100|N|SXT
 SYF|Synchrony Financial Common Stock|N|SYF|N|100|N|SYF
 SYF$A|Synchrony Financial Depositary Shares, each Representing a 1/40th Interest in a Share of 5.625% Fixed Rate Non-Cumulative Perpetual Preferred Stock, Series A|N|SYFpA|N|100|N|SYF-A
@@ -5164,11 +5224,9 @@ TCTL|Premise Capital Diversified Tactical ETF|Z|TCTL|Y|100|N|TCTL
 TD|Toronto Dominion Bank (The) Common Stock|N|TD|N|100|N|TD
 TDA|Telephone and Data Systems, Inc. 5.875% Senior Notes due 2061|N|TDA|N|100|N|TDA
 TDC|Teradata Corporation Common Stock|N|TDC|N|100|N|TDC
-TDE|Telephone and Data Systems, Inc. 6.875% Senior Notes due 2059|N|TDE|N|100|N|TDE
 TDF|Templeton Dragon Fund, Inc. Common Stock|N|TDF|N|100|N|TDF
 TDG|Transdigm Group Incorporated Transdigm Group Inc. Common Stock|N|TDG|N|100|N|TDG
 TDI|Telephone and Data Systems, Inc. Sr Nt|N|TDI|N|100|N|TDI
-TDJ|Telephone and Data Systems, Inc. 7% Senior Notes due 2060|N|TDJ|N|100|N|TDJ
 TDOC|Teladoc Health, Inc. Common Stock|N|TDOC|N|100|N|TDOC
 TDS|Telephone and Data Systems, Inc. Common Shares|N|TDS|N|100|N|TDS
 TDS$U|Telephone and Data Systems, Inc. Depositary Shares, Each Representing a 1/1,000th Interest in a 6.625% Series UU Cumulative Redeemable Perpetual Preferred Stock|N|TDSpU|N|100|N|TDS-U
@@ -5343,6 +5401,7 @@ TRTY|Cambria Trinity ETF|Z|TRTY|Y|100|N|TRTY
 TRU|TransUnion Common Stock|N|TRU|N|100|N|TRU
 TRV|The Travelers Companies, Inc. Common Stock|N|TRV|N|100|N|TRV
 TRX|Tanzanian Gold Corporation Common Stock|A|TRX|N|100|N|TRX
+TRYP|SonicShares Airlines, Hotels, Cruise Lines ETF|P|TRYP|Y|100|N|TRYP
 TS|Tenaris S.A. American Depositary Shares|N|TS|N|100|N|TS
 TSE|Trinseo S.A. Ordinary Shares|N|TSE|N|100|N|TSE
 TSI|TCW Strategic Income Fund, Inc. Common Stock|N|TSI|N|100|N|TSI
@@ -5435,6 +5494,7 @@ UGA|United States Gasoline Fund LP|P|UGA|Y|100|N|UGA
 UGCE|Uncommon Portfolio Design Core Equity ETF|P|UGCE|Y|100|N|UGCE
 UGE|ProShares Ultra Consumer Goods|P|UGE|Y|100|N|UGE
 UGI|UGI Corporation Common Stock|N|UGI|N|100|N|UGI
+UGIC|UGI Corporation Corporate Units|N|UGIC|N|100|N|UGIC
 UGL|ProShares Ultra Gold|P|UGL|Y|100|N|UGL
 UGP|Ultrapar Participacoes S.A. (New) American Depositary Shares (Each representing one Common Share)|N|UGP|N|100|N|UGP
 UHS|Universal Health Services, Inc. Common Stock|N|UHS|N|100|N|UHS
@@ -5539,10 +5599,10 @@ UXI|ProShares Ultra Industrials|P|UXI|Y|100|N|UXI
 UYG|ProShares Ultra Financials|P|UYG|Y|100|N|UYG
 UYM|ProShares Ultra Basic Materials|P|UYM|Y|100|N|UYM
 UZA|United States Cellular Corporation 6.95% Senior Notes due 2060|N|UZA|N|100|N|UZA
-UZB|United States Cellular Corporation 7.25% Senior Notes due 2063|N|UZB|N|100|N|UZB
 UZC|United States Cellular Corporation 7.25% Senior Notes due 2064|N|UZC|N|100|N|UZC
 UZD|United States Cellular Corporation 6.250% Senior Notes due 2069|N|UZD|N|100|N|UZD
 UZE|United States Cellular Corporation 5.500% Senior Notes due 2070|N|UZE|N|100|N|UZE
+UZF|United States Cellular Corporation 5.500% Senior Notes due 2070|N|UZF|N|100|N|UZF
 V|Visa Inc.|N|V|N|100|N|V
 VABS|Virtus Newfleet ABS/MBS ETF|P|VABS|Y|100|N|VABS
 VAC|Marriott Vacations Worldwide Corporation Common Stock|N|VAC|N|100|N|VAC
@@ -5596,7 +5656,9 @@ VGAC|VG Acquisition Corp. Class A Ordinary Shares|N|VGAC|N|100|N|VGAC
 VGAC.U|VG Acquisition Corp. Units, each consisting of one Class A ordinary share and one-third of one redeemable warrant|N|VGAC.U|N|100|N|VGAC=
 VGAC.W|VG Acquisition Corp. Redeemable warrants, each whole warrant exercisable for one Class A ordinary share at an exercise price of $11.50|N|VGAC.WS|N|100|N|VGAC+
 VGI|Virtus Global Multi-Sector Income Fund Common Shares of Beneficial Interest|N|VGI|N|100|N|VGI
+VGII|Virgin Group Acquisition Corp. II Class A Ordinary Shares|N|VGII|N|100|N|VGII
 VGII.U|Virgin Group Acquisition Corp. II Units, each consisting of one Class A ordinary share and one-fifth of one redeemable warrant|N|VGII.U|N|100|N|VGII=
+VGII.W|Virgin Group Acquisition Corp. II Redeemable Warrants, each whole warrant exercisable for one Class A ordinary share at an exercise price of $11.50|N|VGII.WS|N|100|N|VGII+
 VGK|Vanguard FTSEEuropean ETF|P|VGK|Y|100|N|VGK
 VGM|Invesco Trust for Investment Grade Municipals Common Stock (DE)|N|VGM|N|100|N|VGM
 VGR|Vector Group Ltd. Common Stock|N|VGR|N|100|N|VGR
@@ -5721,12 +5783,10 @@ WARR|Warrior Technologies Acquisition Company Class A Common Stock|N|WARR|N|100|
 WARR.U|Warrior Technologies Acquisition Company Units|N|WARR.U|N|100|N|WARR=
 WARR.W|Warrior Technologies Acquisition Company Warrants, each whole warrant exercisable for one share of Class A Common Stock at an exercise price of $11.50|N|WARR.WS|N|100|N|WARR+
 WAT|Waters Corporation Common Stock|N|WAT|N|100|N|WAT
-WBIE|WBI BullBear Rising Income 3000 ETF|P|WBIE|Y|100|N|WBIE
 WBIF|WBI BullBear Value 3000 ETF|P|WBIF|Y|100|N|WBIF
 WBIG|WBI BullBear Yield 3000 ETF|P|WBIG|Y|100|N|WBIG
 WBII|WBI BullBear Global Income ETF|P|WBII|Y|100|N|WBII
 WBIL|WBI BullBear Quality 3000 ETF|P|WBIL|Y|100|N|WBIL
-WBIN|WBI BullBear Trend Switch US Total Return ETF|P|WBIN|Y|100|N|WBIN
 WBIT|Absolute Shares Trust WBI BullBear Trend Switch US 3000 Total Return ETF|P|WBIT|Y|100|N|WBIT
 WBIY|WBI Power Factor High Dividend ETF|P|WBIY|Y|100|N|WBIY
 WBK|Westpac Banking Corporation Common Stock|N|WBK|N|100|N|WBK
@@ -5777,6 +5837,7 @@ WIT|Wipro Limited Common Stock|N|WIT|N|100|N|WIT
 WIW|Western Asset Inflation-Linked Opportunities & Income Fund|N|WIW|N|100|N|WIW
 WIZ|Merlyn.AI Bull-Rider Bear-Fighter ETF|P|WIZ|Y|100|N|WIZ
 WK|Workiva Inc. Class A Common Stock|N|WK|N|100|N|WK
+WKLY|SoFi Weekly Dividend ETF|P|WKLY|Y|100|N|WKLY
 WLDR|Affinity World Leaders Equity ETF |Z|WLDR|Y|100|N|WLDR
 WLK|Westlake Chemical Corporation Common Stock|N|WLK|N|100|N|WLK
 WLKP|Westlake Chemical Partners LP Common Units representing limited partner interests|N|WLKP|N|100|N|WLKP
@@ -5940,6 +6001,7 @@ YLD|Principal Active Income ETF|P|YLD|Y|100|N|YLD
 YMAR|FT Cboe Vest International Equity Buffer ETF - March|Z|YMAR|Y|100|N|YMAR
 YOLO|AdvisorShares Pure Cannabis ETF|P|YOLO|Y|100|N|YOLO
 YPF|YPF Sociedad Anonima Common Stock|N|YPF|N|100|N|YPF
+YPS|Arrow Reverse Cap 500 ETF|Z|YPS|Y|100|N|YPS
 YRD|Yiren Digital Ltd. American Depositary Shares, each representing two ordinary shares|N|YRD|N|100|N|YRD
 YSG|Yatsen Holding Limited American Depositary Shares, each representing four Class A ordinary shares|N|YSG|N|100|N|YSG
 YTPG|TPG Pace Beneficial II Corp. Class A Ordinary Shares|N|YTPG|N|100|N|YTPG
@@ -5959,6 +6021,7 @@ ZH|Zhihu Inc. American Depositary Shares (every two of each representing one Cla
 ZIEXT|IEX Test Company Test Symbol One for IEX|V|ZIEXT|N|100|Y|ZIEXT
 ZIG|The Acquirers Fund|P|ZIG|Y|100|N|ZIG
 ZIM|ZIM Integrated Shipping Services Ltd. Ordinary Shares|N|ZIM|N|100|N|ZIM
+ZIP|ZipRecruiter, Inc. Class A Common Stock|N|ZIP|N|100|N|ZIP
 ZNH|China Southern Airlines Company Limited Common Stock|N|ZNH|N|100|N|ZNH
 ZOM|Zomedica Corp. Common Shares|A|ZOM|N|100|N|ZOM
 ZROZ|PIMCO 25  Year Zero Coupon U.S. Treasury Index Exchange-Traded Fund|P|ZROZ|Y|100|N|ZROZ
@@ -5971,4 +6034,4 @@ ZUO|Zuora, Inc. Class A Common Stock|N|ZUO|N|100|N|ZUO
 ZVV|NYSE ARCA test stock|P|ZVV|N|100|Y|ZVV
 ZXIET|IEX Test Company Test Symbol Three for IEX|V|ZXIET|N|100|Y|ZXIET
 ZYME|Zymeworks Inc. Common Shares|N|ZYME|N|100|N|ZYME
-File Creation Time: 0507202121:30||||||
+File Creation Time: 0528202121:31||||||
