@@ -19,6 +19,8 @@ import pathlib
 import numpy
 import pandas
 
+import helpers
+
 
 DIR = pathlib.Path(__file__).parent
 FMP_DIR = DIR / "third_party" / "financialmodelingprep.com"
@@ -30,10 +32,24 @@ income_path = FMP_DIR / "income-statement.csv"
 income = pandas.read_csv(
     income_path, header=None, names=["symbol", "profit", "revenue", "currency"],
 )
+income["usd_revenue"] = income.apply(
+    lambda row: helpers.to_usd(row["currency"], row["revenue"]),
+    axis=1,
+)
+income["usd_profit"] = income.apply(
+    lambda row: helpers.to_usd(row["currency"], row["profit"]),
+    axis=1,
+)
+
 balance_sheet_path = FMP_DIR / "balance-sheet-statement.csv"
 balance_sheet = pandas.read_csv(
     balance_sheet_path, header=None, names=["symbol", "book", "currency"],
 )
+balance_sheet["usd_book"] = balance_sheet.apply(
+    lambda row: helpers.to_usd(row["currency"], row["book"]),
+    axis=1,
+)
+
 screen = quote.merge(
     income.merge(balance_sheet, how="outer", on="symbol",), how="outer", on="symbol",
 ).fillna(value=0)
@@ -44,9 +60,9 @@ screen_ones = numpy.ones(len(screen.index))
 screen["average"] = numpy.exp(
     (1.0 / 9.0)
     * (
-        numpy.log(numpy.fmax(screen_ones, screen["book"]))
-        + numpy.log(numpy.fmax(screen_ones, screen["profit"]))
-        + numpy.log(numpy.fmax(screen_ones, screen["revenue"]))
+        numpy.log(numpy.fmax(screen_ones, screen["usd_book"]))
+        + numpy.log(numpy.fmax(screen_ones, screen["usd_profit"]))
+        + numpy.log(numpy.fmax(screen_ones, screen["usd_revenue"]))
         + 6 * numpy.log(numpy.fmax(screen_ones, screen["market_cap"]))
     )
 )
