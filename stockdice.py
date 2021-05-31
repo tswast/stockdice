@@ -28,11 +28,11 @@ quote_path = FMP_DIR / "quote.csv"
 quote = pandas.read_csv(quote_path, header=None, names=["symbol", "market_cap"])
 income_path = FMP_DIR / "income-statement.csv"
 income = pandas.read_csv(
-    income_path, header=None, names=["symbol", "profit", "revenue"],
+    income_path, header=None, names=["symbol", "profit", "revenue", "currency"],
 )
 balance_sheet_path = FMP_DIR / "balance-sheet-statement.csv"
 balance_sheet = pandas.read_csv(
-    balance_sheet_path, header=None, names=["symbol", "book"],
+    balance_sheet_path, header=None, names=["symbol", "book", "currency"],
 )
 screen = quote.merge(
     income.merge(balance_sheet, how="outer", on="symbol",), how="outer", on="symbol",

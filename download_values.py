@@ -15,8 +15,6 @@
 # limitations under the License.
 
 import asyncio
-import functools
-import pathlib
 import logging
 import time
 import sys

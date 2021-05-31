@@ -33,6 +33,7 @@ RATE_LIMIT_STATUS = 429
 RATE_LIMIT_SECONDS = "X-Rate-Limit-Retry-After-Seconds"
 RATE_LIMIT_MILLISECONDS = "X-Rate-Limit-Retry-After-Milliseconds"
 
+forex_to_usd = None
 
 class RateLimitError(Exception):
     def __init__(self, seconds, millis):
@@ -68,6 +69,41 @@ async def check_status(resp):
     return resp_json
 
 
+def load_forex():
+    global forex_to_usd
+    forex_to_usd = {"USD": 1.0}
+    csv_path = FMP_DIR / "forex.csv"
+
+    with open(csv_path) as forex_csv:
+        for line in forex_csv:
+            line = line.strip()
+            ticker, bid, ask = line.split(",")
+            # Use average of bid/ask for simplicity.
+            price = (float(bid) + float(ask)) / 2.0
+            from_curr, to_curr = ticker.split("/")
+
+            if to_curr == "USD":
+                forex_to_usd[from_curr] = price
+            elif from_curr == "USD":
+                forex_to_usd[to_curr] = 1.0 / price
+
+    # CNY is reported value for some incomes and balance sheets, but not
+    # available in Forex API. CNH is related and tracks closely, but has more
+    # volatility.
+    # https://www.nasdaq.com/articles/cnh-vs-cny-differences-between-two-yuan-2018-09-12
+    forex_to_usd["CNY"] = forex_to_usd["CNH"]
+
+
+def to_usd(curr, value):
+    if forex_to_usd is None:
+        load_forex()
+
+    if curr == "None":
+        # Assume USD? None usually corresponds to no reported value, anyway.
+        return value
+
+    return forex_to_usd[curr] * value
+
 __all__ = [
     "DIR",
     "NASDAQ_DIR",
@@ -76,4 +112,5 @@ __all__ = [
     "RateLimitError",
     "retry_fmp",
     "check_status",
+    "to_usd",
 ]

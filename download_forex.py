@@ -13,14 +13,34 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import asyncio
+
+import aiohttp
+
 from helpers import *
+
 
 FMP_FOREX = "https://financialmodelingprep.com/api/v3/fx?apikey={apikey}"
 
-# Note: CNY is reported value for some incomes, but not available in Forex API.
-# CNH is related and tracks closely, but has more volatility.
-# https://www.nasdaq.com/articles/cnh-vs-cny-differences-between-two-yuan-2018-09-12
 
-# TODO: test the direction is evaluated correctly. USD/CNH, but EUR/USD.
-# TODO: use average of bid/ask?
+@retry_fmp
+async def download_forex(session, out):
+    url = FMP_FOREX.format(apikey=FMP_API_KEY)
+    async with session.get(url) as resp:
+        resp_json = await check_status(resp)
+        for forex in resp_json:
+            ticker = forex.get("ticker")
+            bid = forex.get("bid")
+            ask = forex.get("ask")
+            out.write(f"{ticker},{bid},{ask}\n")
 
+
+async def main():
+    csv_path = FMP_DIR / "forex.csv"
+    with open(csv_path, "w") as out:
+        async with aiohttp.ClientSession() as session:
+            await download_forex(session, out)
+
+if __name__ == "__main__":
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(main())
