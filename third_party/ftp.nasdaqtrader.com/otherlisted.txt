@@ -56,6 +56,7 @@ ACP$A|Aberdeen Income Credit Strategies Fund 5.250% Series A Perpetual Preferred
 ACP.R|Aberdeen Income Credit Strategies Fund Rights (expiring June 16, 2021)|N|ACPr|N|100|N|ACP^
 ACR|ACRES Commercial Realty Corp. Common Stock|N|ACR|N|100|N|ACR
 ACR$C|ACRES Commercial Realty Corp. 8.625% Fixed-to-Floating Series C Cumulative Redeemable Preferred Stock |N|ACRpC|N|100|N|ACR-C
+ACR$D|ACRES Commercial Realty Corp. 7.875% Series D Cumulative Redeemable Preferred Stock|N|ACRpD|N|100|N|ACR-D
 ACRE|Ares Commercial Real Estate Corporation Common Stock|N|ACRE|N|100|N|ACRE
 ACSG|Xtrackers MSCI ACWI ex USA ESG Leaders Equity ETF|P|ACSG|Y|100|N|ACSG
 ACSI|American Customer Satisfaction ETF|Z|ACSI|Y|100|N|ACSI
@@ -71,7 +72,9 @@ ADCT|ADC Therapeutics SA Common Shares|N|ADCT|N|100|N|ADCT
 ADEX|Adit EdTech Acquisition Corp. Common Stock|N|ADEX|N|100|N|ADEX
 ADEX.U|Adit EdTech Acquisition Corp. Units, each consisting of one share of common stock, and one-half of one redeemable warrant|N|ADEX.U|N|100|N|ADEX=
 ADEX.W|Adit EdTech Acquisition Corp. Redeemable Warrants, each whole warrant exercisable for shares of common stock at an exercise price of $11.50 per share|N|ADEX.WS|N|100|N|ADEX+
+ADF|Aldel Financial Inc. Class A Common Stock|N|ADF|N|100|N|ADF
 ADF.U|Aldel Financial Inc. Units, each consisting of one share of Class A common stock and one-half of one redeemable warrant|N|ADF.U|N|100|N|ADF=
+ADF.W|Aldel Financial Inc. Warrants, each whole warrant entitles the holder thereof to purchase one share of Class A common stock at a price of $11.50 per share|N|ADF.WS|N|100|N|ADF+
 ADFI|Anfield Dynamic Fixed Income ETF|Z|ADFI|Y|100|N|ADFI
 ADIV|SmartETFs Asia Pacific Dividend Builder ETF|P|ADIV|Y|100|N|ADIV
 ADM|Archer-Daniels-Midland Company Common Stock|N|ADM|N|100|N|ADM
@@ -1737,10 +1740,10 @@ ESBA|Empire State Realty OP, L.P. Series ES Operating Partnership Units Represen
 ESCR|Xtrackers Bloomberg Barclays US Investment Grade Corporate ESG ETF|Z|ESCR|Y|100|N|ESCR
 ESE|ESCO Technologies Inc. Common Stock|N|ESE|N|100|N|ESE
 ESEB|Xtrackers J.P. Morgan ESG Emerging Markets Sovereign ETF|Z|ESEB|Y|100|N|ESEB
-ESG|FlexShares Trust FlexShares STOXX US ESG Impact Index Fund|Z|ESG|Y|100|N|ESG
+ESG|FlexShares STOXX US ESG Select Index Fund|Z|ESG|Y|100|N|ESG
 ESGA|American Century Sustainable Equity ETF|P|ESGA|Y|100|N|ESGA
 ESGC|Eros STX Global Corporation A Ordinary Shares|N|ESGC|N|100|N|ESGC
-ESGG|FlexShares Trust FlexShares STOXX Global ESG Impact Index Fund|Z|ESGG|Y|100|N|ESGG
+ESGG|FlexShares STOXX Global ESG Select Index Fund|Z|ESGG|Y|100|N|ESGG
 ESGN|Columbia Sustainable International Equity Income ETF|P|ESGN|Y|100|N|ESGN
 ESGS|Columbia Sustainable U.S. Equity Income ETF|P|ESGS|Y|100|N|ESGS
 ESGV|Vanguard ESG U.S. Stock ETF|Z|ESGV|Y|100|N|ESGV
@@ -2373,7 +2376,6 @@ GMOM|Cambria Global Momentum ETF|Z|GMOM|Y|100|N|GMOM
 GMRE|Global Medical REIT Inc. Common Stock|N|GMRE|N|100|N|GMRE
 GMRE$A|Global Medical REIT Inc. Series A Cumulative Redeemable Preferred Stock|N|GMREpA|N|100|N|GMRE-A
 GMS|GMS Inc. Common Stock|N|GMS|N|100|N|GMS
-GMTA|GATX Corporation 5.625% Senior Notes due 2066|N|GMTA|N|100|N|GMTA
 GNAF|MicroSectors FANG  Index Inverse ETNs due January 8, 2038|P|GNAF|N|100|N|GNAF
 GNE|Genie Energy Ltd. Class B Common Stock Stock|N|GNE|N|100|N|GNE
 GNE$A|Genie Energy Ltd. Series 2012 - A Preferred Stock, $0.01 par value|N|GNEpA|N|100|N|GNE-A
@@ -2897,9 +2899,6 @@ IPO|Renaissance IPO ETF|P|IPO|Y|100|N|IPO
 IPOD|Social Capital Hedosophia Holdings Corp. IV Class A Ordinary Shares|N|IPOD|N|100|N|IPOD
 IPOD.U|Social Capital Hedosophia Holdings Corp. IV Units, each consisting of one Class A ordinary share and one-fourth of one redeemable warrant|N|IPOD.U|N|100|N|IPOD=
 IPOD.W|Social Capital Hedosophia Holdings Corp. IV Redeemable Warrants, each whole warrant exercisable for one Class A ordinary share at an exercise price of $11.50|N|IPOD.WS|N|100|N|IPOD+
-IPOE|Social Capital Hedosophia Holdings Corp. V Class A Ordinary Shares|N|IPOE|N|100|N|IPOE
-IPOE.U|Social Capital Hedosophia Holdings Corp. V Units, each consisting of one Class A ordinary share and one-fourth of one redeemable warrant|N|IPOE.U|N|100|N|IPOE=
-IPOE.W|Social Capital Hedosophia Holdings Corp. V Redeemable Warrants, each whole warrant exercisable for one Class A ordinary share at an exercise price of $11.50|N|IPOE.WS|N|100|N|IPOE+
 IPOF|Social Capital Hedosophia Holdings Corp. VI Class A Ordinary Shares|N|IPOF|N|100|N|IPOF
 IPOF.U|Social Capital Hedosophia Holdings Corp. VI Units, each consisting of one Class A ordinary share and one-fourth of one redeemable warrant|N|IPOF.U|N|100|N|IPOF=
 IPOF.W|Social Capital Hedosophia Holdings Corp. VI Redeemable warrants, each whole warrant exercisable for one Class A ordinary share at an exercise price of $11.50|N|IPOF.WS|N|100|N|IPOF+
@@ -3116,8 +3115,6 @@ JPIN|JPMorgan Diversified Return International Equity ETF|P|JPIN|Y|100|N|JPIN
 JPM|JP Morgan Chase & Co. Common Stock|N|JPM|N|100|N|JPM
 JPM$C|J P Morgan Chase & Co Depositary Shares, each representing a 1/400th interest in a share of 6.00% Non-Cumulative  Preferred Stock, Series EE|N|JPMpC|N|100|N|JPM-C
 JPM$D|J P Morgan Chase & Co Depositary Shares, each representing a 1/400th  interest in a share of 5.75% Non-Cumulative  Preferred Stock, Series DD|N|JPMpD|N|100|N|JPM-D
-JPM$G|J P Morgan Chase & Co Depositary Shares, each representing a 1/400th interest in a share of 6.10% Non-Cumulative Preferred Stock, Series AA|N|JPMpG|N|100|N|JPM-G
-JPM$H|J P Morgan Chase & Co Depositary Shares, each representing a 1/400th interest in a share of 6.15% Non-Cumulative Preferred Stock, Series BB|N|JPMpH|N|100|N|JPM-H
 JPM$J|J P Morgan Chase & Co Depositary Shares, each representing a 1/400th interest in a share of JPMorgan Chase & Co. 4.75% Non-Cumulative Preferred Stock, Series GG|N|JPMpJ|N|100|N|JPM-J
 JPM$K|J P Morgan Chase & Co Depositary Shares, each representing a 1/400th interest in a share of 4.55% Non-Cumulative Preferred Stock, Series JJ|N|JPMpK|N|100|N|JPM-K
 JPM$L|J P Morgan Chase & Co Depositary Shares, each representing a 1/400th interest in a share of 4.625% Non-Cumulative Preferred Stock, Series LL|N|JPMpL|N|100|N|JPM-L
@@ -3142,6 +3139,7 @@ JT|Jianpu Technology Inc. American depositary shares|N|JT|N|100|N|JT
 JTA|Nuveen Tax-Advantaged Total Return Strategy Fund Common Share of Beneficial Interest|N|JTA|N|100|N|JTA
 JTD|Nuveen Tax-Advantaged Dividend Growth Fund Common Shares of Beneficial Interest|N|JTD|N|100|N|JTD
 JULZ|TrueShares Structured Outcome (July) ETF|Z|JULZ|Y|100|N|JULZ
+JUNZ|TrueShares Structured Outcome (June) ETF|Z|JUNZ|Y|100|N|JUNZ
 JUST|Goldman Sachs JUST U.S. Large Cap Equity ETF|P|JUST|Y|100|N|JUST
 JVAL|JPMorgan U.S. Value Factor ETF|P|JVAL|Y|100|N|JVAL
 JW.A|John Wiley & Sons, Inc. Common Stock|N|JW.A|N|100|N|JW.A
@@ -4776,7 +4774,6 @@ SCHQ|Schwab Long-Term U.S. Treasury ETF|P|SCHQ|Y|100|N|SCHQ
 SCHR|Schwab Intermediate-Term U.S. Treasury ETF|P|SCHR|Y|100|N|SCHR
 SCHV|Schwab U.S. Large-Cap Value ETF|P|SCHV|Y|100|N|SCHV
 SCHW|Charles Schwab Corporation (The) Common Stock|N|SCHW|N|100|N|SCHW
-SCHW$C|The Charles Schwab Corporation Depositary Shares each representing 1/40th interest in a share of 6% Non-Cumulative Perpetual Preferred Stock, Series C|N|SCHWpC|N|100|N|SCHW-C
 SCHW$D|The Charles Schwab Corporation Depositary Shares each representing 1/40th interest in a share of 5.95% Non-Cumulative Perpetual Preferred Stock, Series D|N|SCHWpD|N|100|N|SCHW-D
 SCHW$J|The Charles Schwab Corporation Depositary Shares, Each Representing a 1/40th Interest in a Share of 4.450% Non-Cumulative Perpetual Preferred Stock, Series J|N|SCHWpJ|N|100|N|SCHW-J
 SCHX|Schwab U.S. Large-Cap ETF|P|SCHX|Y|100|N|SCHX
@@ -5260,7 +5257,6 @@ TERM|EquityCompass Tactical Risk Manager ETF|P|TERM|Y|100|N|TERM
 TEVA|Teva Pharmaceutical Industries Limited American Depositary Shares|N|TEVA|N|100|N|TEVA
 TEX|Terex Corporation Common Stock|N|TEX|N|100|N|TEX
 TFC|Truist Financial Corporation Common Stock|N|TFC|N|100|N|TFC
-TFC$H|Truist Financial Corporation Series H |N|TFCpH|N|100|N|TFC-H
 TFC$I|Truist Financial Corporation Depositary Shares|N|TFCpI|N|100|N|TFC-I
 TFC$O|Truist Financial Corporation Depositary Shares, Each Representing a 1/1,000th Interest in a Share of Series O Non-Cumulative Perpetual Preferred Stock|N|TFCpO|N|100|N|TFC-O
 TFC$R|Truist Financial Corporation Depositary Shares, each representing 1/1,000th interest in a share of Series R Non-Cumulative Perpetual Preferred Stock|N|TFCpR|N|100|N|TFC-R
@@ -5872,7 +5868,6 @@ WPM|Wheaton Precious Metals Corp Common Shares (Canada)|N|WPM|N|100|N|WPM
 WPP|WPP plc American Depositary Shares|N|WPP|N|100|N|WPP
 WPS|iShares International Developed Property ETF|P|WPS|Y|100|N|WPS
 WRB|W.R. Berkley Corporation Common Stock|N|WRB|N|100|N|WRB
-WRB$D|W.R. Berkley Corporation 5.75% Subordinated Debentures due 2056|N|WRBpD|N|100|N|WRB-D
 WRB$E|W.R. Berkley Corporation 5.70% Subordinated Debentures due 2058|N|WRBpE|N|100|N|WRB-E
 WRB$F|W.R. Berkley Corporation 5.10% Subordinated Debentures due 2059|N|WRBpF|N|100|N|WRB-F
 WRB$G|W.R. Berkley Corporation 4.25% Subordinated Debentures due 2060|N|WRBpG|N|100|N|WRB-G
@@ -6034,4 +6029,4 @@ ZUO|Zuora, Inc. Class A Common Stock|N|ZUO|N|100|N|ZUO
 ZVV|NYSE ARCA test stock|P|ZVV|N|100|Y|ZVV
 ZXIET|IEX Test Company Test Symbol Three for IEX|V|ZXIET|N|100|Y|ZXIET
 ZYME|Zymeworks Inc. Common Shares|N|ZYME|N|100|N|ZYME
-File Creation Time: 0528202121:31||||||
+File Creation Time: 0601202112:11||||||
