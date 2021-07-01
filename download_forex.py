@@ -14,7 +14,6 @@
 # limitations under the License.
 
 import asyncio
-from re import S
 
 import aiohttp
 
