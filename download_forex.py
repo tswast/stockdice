@@ -14,6 +14,7 @@
 # limitations under the License.
 
 import asyncio
+from re import S
 
 import aiohttp
 
@@ -21,6 +22,24 @@ from helpers import *
 
 
 FMP_FOREX = "https://financialmodelingprep.com/api/v3/fx?apikey={apikey}"
+FMP_FOREX_PAIR = "https://financialmodelingprep.com/api/v4/forex/last/{currency}USD?apikey={apikey}"
+
+CURRENCIES = {
+    "ARS",  # Argentine Peso
+    "BRL",  # Brazilian Real
+    "CLP",  # Chilean Peso
+    "COP",  # Colombian Peso
+    "IDR",  # Indonesian Rupiah
+    "ILS",  # Israeli New Shekel
+    "KRW",  # South Korean won
+    "PEN",  # Peruvian sol
+    "PHP",  # Philippine Peso
+    "RUB",  # Russian Ruble
+    "TWD",  # New Taiwan dollar
+    # CNH is related and tracks CNY closely, but has more volatility.
+    # https://www.nasdaq.com/articles/cnh-vs-cny-differences-between-two-yuan-2018-09-12
+    "CNY",  # Chinese Yuan
+}
 
 
 @retry_fmp
@@ -35,11 +54,28 @@ async def download_forex(session, out):
             out.write(f"{ticker},{bid},{ask}\n")
 
 
+@retry_fmp
+async def download_pair(session, out, currency):
+    url = FMP_FOREX_PAIR.format(currency=currency, apikey=FMP_API_KEY)
+    async with session.get(url) as resp:
+        forex = await check_status(resp)
+        ticker = forex.get("symbol").replace("USD", "/USD")
+        bid = forex.get("bid")
+        ask = forex.get("ask")
+        out.write(f"{ticker},{bid},{ask}\n")
+
+
+async def download_pairs(session, out):
+    for currency in CURRENCIES:
+        await download_pair(session, out, currency)
+
+
 async def main():
     csv_path = FMP_DIR / "forex.csv"
     with open(csv_path, "w") as out:
         async with aiohttp.ClientSession() as session:
             await download_forex(session, out)
+            await download_pairs(session, out)
 
 if __name__ == "__main__":
     loop = asyncio.get_event_loop()

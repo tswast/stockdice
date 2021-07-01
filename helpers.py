@@ -87,25 +87,6 @@ def load_forex():
             elif from_curr == "USD":
                 forex_to_usd[to_curr] = 1.0 / price
 
-    # CNY is reported value for some incomes and balance sheets, but not
-    # available in Forex API. CNH is related and tracks closely, but has more
-    # volatility.
-    # https://www.nasdaq.com/articles/cnh-vs-cny-differences-between-two-yuan-2018-09-12
-    forex_to_usd["CNY"] = forex_to_usd["CNH"]
-
-    # Not present in Forex API? Estimates as workaround.
-    # Last updated: 2021-05-31
-    forex_to_usd["ARS"] = 0.011     # Argentine Peso
-    forex_to_usd["BRL"] = 0.19      # Brazilian Real
-    forex_to_usd["CLP"] = 0.0014    # Chilean Peso
-    forex_to_usd["COP"] = 0.00027   # Colombian Peso
-    forex_to_usd["IDR"] = 0.000070  # Indonesian Rupiah
-    forex_to_usd["ILS"] = 0.31      # Israeli New Shekel
-    forex_to_usd["KRW"] = 0.00090   # South Korean won
-    forex_to_usd["PEN"] = 0.26      # Peruvian sol
-    forex_to_usd["PHP"] = 0.021     # Philippine Peso
-    forex_to_usd["RUB"] = 0.014     # Russian Ruble
-    forex_to_usd["TWD"] = 0.036     # New Taiwan dollar
 
 
 def to_usd(curr, value):
