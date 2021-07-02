@@ -58,12 +58,12 @@ screen_ones = numpy.ones(len(screen.index))
 # Even weight seemed to skew too heavily towards value. Place a more weight in
 # market cap, since market risk is the main factor I want to target.
 screen["average"] = numpy.exp(
-    (1.0 / 9.0)
+    (1.0 / 10.0)
     * (
-        numpy.log(numpy.fmax(screen_ones, screen["usd_book"]))
-        + numpy.log(numpy.fmax(screen_ones, screen["usd_profit"]))
-        + numpy.log(numpy.fmax(screen_ones, screen["usd_revenue"]))
-        + 6 * numpy.log(numpy.fmax(screen_ones, screen["market_cap"]))
+        1 * numpy.log(numpy.fmax(screen_ones, screen["usd_book"]))
+        + 1 * numpy.log(numpy.fmax(screen_ones, screen["usd_profit"]))
+        + 3 * numpy.log(numpy.fmax(screen_ones, screen["usd_revenue"]))
+        + 5 * numpy.log(numpy.fmax(screen_ones, screen["market_cap"]))
     )
 )
 
