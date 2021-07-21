@@ -61,8 +61,8 @@ screen["average"] = numpy.exp(
     (1.0 / 10.0)
     * (
         1 * numpy.log(numpy.fmax(screen_ones, screen["usd_book"]))
-        + 1 * numpy.log(numpy.fmax(screen_ones, screen["usd_profit"]))
-        + 3 * numpy.log(numpy.fmax(screen_ones, screen["usd_revenue"]))
+        + 2 * numpy.log(numpy.fmax(screen_ones, screen["usd_profit"]))
+        + 2 * numpy.log(numpy.fmax(screen_ones, screen["usd_revenue"]))
         + 5 * numpy.log(numpy.fmax(screen_ones, screen["market_cap"]))
     )
 )
