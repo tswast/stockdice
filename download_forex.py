@@ -31,6 +31,7 @@ CURRENCIES = {
     "IDR",  # Indonesian Rupiah
     "ILS",  # Israeli New Shekel
     "KRW",  # South Korean won
+    "KYD",  # Cayman Islands dollar
     "PEN",  # Peruvian sol
     "PHP",  # Philippine Peso
     "RUB",  # Russian Ruble
