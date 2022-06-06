@@ -465,7 +465,7 @@ AWI|Armstrong World Industries Inc Common Stock|N|AWI|N|100|N|AWI
 AWK|American Water Works Company, Inc. Common Stock|N|AWK|N|100|N|AWK
 AWP|Aberdeen Global Premier Properties Fund Common Shares of Beneficial Interest|N|AWP|N|100|N|AWP
 AWR|American States Water Company Common Stock|N|AWR|N|100|N|AWR
-AWTM|National Investment Services Ultra-Short Duration Enhanced Income ETF|P|AWTM|Y|100|N|AWTM
+AWTM|AWTM Ultra-Short Duration Enhanced Income ETF|P|AWTM|Y|100|N|AWTM
 AWX|Avalon Holdings Corporation Common Stock|A|AWX|N|100|N|AWX
 AWYX|ETFMG 2X Daily Travel Tech ETF|P|AWYX|Y|100|N|AWYX
 AX|Axos Financial, Inc. Common Stock|N|AX|N|100|N|AX
@@ -1767,6 +1767,7 @@ EMR|Emerson Electric Company Common Stock|N|EMR|N|100|N|EMR
 EMSG|Xtrackers MSCI Emerging Markets ESG Leaders Equity ETF|P|EMSG|Y|100|N|EMSG
 EMTL|SPDR DoubleLine Emerging Markets Fixed Income ETF|Z|EMTL|Y|100|N|EMTL
 EMTY|ProShares Decline of the Retail Store ETF|P|EMTY|Y|100|N|EMTY
+EMWP|Eros Media World PLC A Ordinary Shares, GBP 0.30 par value|N|EMWP|N|100|N|EMWP
 EMX|EMX Royalty Corporation Common Shares (Canada)|A|EMX|N|100|N|EMX
 ENB|Enbridge Inc Common Stock|N|ENB|N|100|N|ENB
 ENBA|Enbridge Inc 6.375% Fixed-to-Floating Rate Subordinated Notes Series 2018-B due 2078|N|ENBA|N|100|N|ENBA
@@ -1865,7 +1866,6 @@ ESEB|Xtrackers J.P. Morgan ESG Emerging Markets Sovereign ETF|Z|ESEB|Y|100|N|ESE
 ESG|FlexShares STOXX US ESG Select Index Fund|Z|ESG|Y|100|N|ESG
 ESGA|American Century Sustainable Equity ETF|P|ESGA|Y|100|N|ESGA
 ESGB|IQ MacKay ESG Core Plus Bond ETF|P|ESGB|Y|100|N|ESGB
-ESGC|Eros STX Global Corporation A Ordinary Shares|N|ESGC|N|100|N|ESGC
 ESGG|FlexShares STOXX Global ESG Select Index Fund|Z|ESGG|Y|100|N|ESGG
 ESGN|Columbia Sustainable International Equity Income ETF|P|ESGN|Y|100|N|ESGN
 ESGS|Columbia Sustainable U.S. Equity Income ETF|P|ESGS|Y|100|N|ESGS
@@ -4013,7 +4013,6 @@ NETI|Eneti Inc. Common Stock|N|NETI|N|100|N|NETI
 NETL|NETLease Corporate Real Estate ETF|P|NETL|Y|100|N|NETL
 NETZ|Engine No. 1 ETF Trust Engine No. 1 Transform Climate ETF|Z|NETZ|Y|100|N|NETZ
 NEU|NewMarket Corp Common Stock|N|NEU|N|100|N|NEU
-NEV|Nuveen Enhanced Municipal Value Fund Common Shares of Beneficial Interest|N|NEV|N|100|N|NEV
 NEWP|New Pacific Metals Corp. Common Shares|A|NEWP|N|100|N|NEWP
 NEWR|New Relic, Inc. Common Stock|N|NEWR|N|100|N|NEWR
 NEX|NexTier Oilfield Solutions Inc. Common Stock|N|NEX|N|100|N|NEX
@@ -6212,6 +6211,7 @@ WDH|Waterdrop Inc. American Depositary Shares (each representing the right to re
 WDI|Western Asset Diversified Income Fund Common Shares of Beneficial Interest|N|WDI|N|100|N|WDI
 WDIV|SPDR S&P Global Dividend|P|WDIV|Y|100|N|WDIV
 WDNA|WisdomTree BioRevolution Fund|Z|WDNA|Y|100|N|WDNA
+WDS|Woodside Energy Group Limited American Depositary Shares, each representing one Ordinary Share|N|WDS|N|100|N|WDS
 WE|WeWork Inc. Class A Common Stock|N|WE|N|100|N|WE
 WE.W|WeWork Inc. Redeemable Warrants, each whole warrant exercisable for one share of Class A common stock at an exercise price of $11.50 per share|N|WE.WS|N|100|N|WE+
 WEA|Western Asset Bond Fund Share of Beneficial Interest|N|WEA|N|100|N|WEA
@@ -6479,7 +6479,6 @@ ZIEXT|IEX Test Company Test Symbol One for IEX|V|ZIEXT|N|100|Y|ZIEXT
 ZIG|The Acquirers Fund|P|ZIG|Y|100|N|ZIG
 ZIM|ZIM Integrated Shipping Services Ltd. Ordinary Shares|N|ZIM|N|100|N|ZIM
 ZIP|ZipRecruiter, Inc. Class A Common Stock|N|ZIP|N|100|N|ZIP
-ZME|Zhangmen Education Inc. American Depositary Shares|N|ZME|N|100|N|ZME
 ZNH|China Southern Airlines Company Limited Common Stock|N|ZNH|N|100|N|ZNH
 ZOM|Zomedica Corp. Common Shares|A|ZOM|N|100|N|ZOM
 ZROZ|PIMCO 25  Year Zero Coupon U.S. Treasury Index Exchange-Traded Fund|P|ZROZ|Y|100|N|ZROZ
@@ -6494,4 +6493,4 @@ ZVV|NYSE ARCA test stock|P|ZVV|N|100|Y|ZVV
 ZWS|Zurn Water Solutions Corporation Common Stock|N|ZWS|N|100|N|ZWS
 ZXIET|IEX Test Company Test Symbol Three for IEX|V|ZXIET|N|100|Y|ZXIET
 ZYME|Zymeworks Inc. Common Shares|N|ZYME|N|100|N|ZYME
-File Creation Time: 0601202209:30||||||
+File Creation Time: 0606202209:31||||||

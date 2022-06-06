@@ -14,6 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import argparse
 import asyncio
 import logging
 import time
@@ -39,6 +40,7 @@ def load_symbols():
         for line in handle:
             all_symbols.append(line.strip())
 
+    all_symbols.sort()
     return all_symbols
 
 
@@ -105,7 +107,7 @@ async def download_market_cap(session, symbol, out):
         out.write(f"{symbol},{market_cap}\n")
 
 
-async def main(csv_path, download_fn):
+async def main(csv_path, download_fn, start_symbol=None):
     # all_symbols = load_symbols()[:1]
     all_symbols = load_symbols()
 
@@ -114,6 +116,10 @@ async def main(csv_path, download_fn):
             batch_index = 0
             batch_start = time.monotonic()
             for symbol in all_symbols:
+                # Assume symbols are in alphabetical order.
+                if start_symbol is not None and symbol < start_symbol:
+                    continue
+
                 # Rate limit!
                 if batch_index >= BATCH_SIZE:
                     batch_time = time.monotonic() - batch_start()
@@ -126,7 +132,11 @@ async def main(csv_path, download_fn):
 
 
 if __name__ == "__main__":
-    command = sys.argv[1] if len(sys.argv) > 1 else ""
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--start")
+    parser.add_argument("command")
+    args = parser.parse_args()
+    command = args.command
     if command == "quote":
         csv_path = FMP_DIR / "quote.csv"
         download_fn = download_market_cap
@@ -139,4 +149,4 @@ if __name__ == "__main__":
     else:
         sys.exit("expected {quote,balance-sheet,income}")
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(main(csv_path, download_fn))
+    loop.run_until_complete(main(csv_path, download_fn, start_symbol=args.start))
