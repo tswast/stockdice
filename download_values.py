@@ -111,7 +111,12 @@ async def main(csv_path, download_fn, start_symbol=None):
     # all_symbols = load_symbols()[:1]
     all_symbols = load_symbols()
 
-    with open(csv_path, "w") as out:
+    if start_symbol is not None:
+        mode = "a"
+    else:
+        mode = "w"
+
+    with open(csv_path, mode) as out:
         async with aiohttp.ClientSession() as session:
             batch_index = 0
             batch_start = time.monotonic()
