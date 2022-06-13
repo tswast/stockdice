@@ -53,6 +53,7 @@ balance_sheet["usd_book"] = balance_sheet.apply(
 screen = quote.merge(
     income.merge(balance_sheet, how="outer", on="symbol",), how="outer", on="symbol",
 ).fillna(value=0)
+screen.drop_duplicates(keep="last")
 screen_ones = numpy.ones(len(screen.index))
 
 # Even weight seemed to skew too heavily towards value. Place a more weight in
