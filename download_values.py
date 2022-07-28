@@ -153,5 +153,6 @@ if __name__ == "__main__":
         download_fn = download_income
     else:
         sys.exit("expected {quote,balance-sheet,income}")
-    loop = asyncio.get_event_loop()
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
     loop.run_until_complete(main(csv_path, download_fn, start_symbol=args.start))
