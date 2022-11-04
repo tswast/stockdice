@@ -15,6 +15,7 @@
 # limitations under the License.
 
 import argparse
+import io
 import pathlib
 
 import numpy
@@ -33,10 +34,14 @@ balance_sheet_path = FMP_DIR / "balance-sheet-statement.csv"
 def load_dfs():
     quote = pandas.read_csv(quote_path, header=None, names=["symbol", "market_cap"])
     income = pandas.read_csv(
-        income_path, header=None, names=["symbol", "profit", "revenue", "currency"],
+        income_path,
+        header=None,
+        names=["symbol", "profit", "revenue", "currency"],
     )
     balance_sheet = pandas.read_csv(
-        balance_sheet_path, header=None, names=["symbol", "book", "currency"],
+        balance_sheet_path,
+        header=None,
+        names=["symbol", "book", "currency"],
     )
     return quote, income, balance_sheet
 
@@ -48,15 +53,20 @@ def add_usd_column_from_forex(df, column):
     )
 
 
-
-def main():
+def main(number_of_rolls=1, output_path="--"):
     quote, income, balance_sheet = load_dfs()
     add_usd_column_from_forex(income, "revenue")
     add_usd_column_from_forex(income, "profit")
     add_usd_column_from_forex(balance_sheet, "book")
 
     screen = quote.merge(
-        income.merge(balance_sheet, how="outer", on="symbol",), how="outer", on="symbol",
+        income.merge(
+            balance_sheet,
+            how="outer",
+            on="symbol",
+        ),
+        how="outer",
+        on="symbol",
     ).fillna(value=0)
     screen.drop_duplicates(keep="last")
     screen_ones = numpy.ones(len(screen.index))
@@ -73,9 +83,18 @@ def main():
         )
     )
 
-    symbol = screen.sample(weights=screen["average"])
-    print(symbol)
+    result = screen.sample(n=number_of_rolls, weights=screen["average"], replace=True)
+    if output_path == "--":
+        with io.StringIO() as out:
+            result.to_csv(out, index=False)
+            print(out.getvalue())
+    else:
+        result.to_csv(output_path, index=False)
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(prog="stockdice.py")
+    parser.add_argument("-n", "--number", type=int, default=1)
+    parser.add_argument("-o", "--output", default="--")
+    args = parser.parse_args()
+    main(number_of_rolls=args.number, output_path=args.output)
