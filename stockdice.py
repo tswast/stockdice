@@ -53,7 +53,21 @@ def add_usd_column_from_forex(df, column):
     )
 
 
-def main(number_of_rolls=1, output_path="--"):
+def output_dataframe(result, output_path, format):
+    if format == "csv":
+        if output_path == "--":
+            with io.StringIO() as out:
+                result.to_csv(out, index=False)
+                print(out.getvalue())
+        else:
+            result.to_csv(output_path, index=False)
+    elif format == "text":
+        if output_path != "--":
+            raise ValueError("text output to file not supported")
+        print(result)
+
+
+def main(number_of_rolls=1, output_path="--", format="csv"):
     quote, income, balance_sheet = load_dfs()
     add_usd_column_from_forex(income, "revenue")
     add_usd_column_from_forex(income, "profit")
@@ -84,17 +98,13 @@ def main(number_of_rolls=1, output_path="--"):
     )
 
     result = screen.sample(n=number_of_rolls, weights=screen["average"], replace=True)
-    if output_path == "--":
-        with io.StringIO() as out:
-            result.to_csv(out, index=False)
-            print(out.getvalue())
-    else:
-        result.to_csv(output_path, index=False)
+    output_dataframe(result, output_path, format)
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(prog="stockdice.py")
     parser.add_argument("-n", "--number", type=int, default=1)
     parser.add_argument("-o", "--output", default="--")
+    parser.add_argument("-f", "--format", default="csv")
     args = parser.parse_args()
-    main(number_of_rolls=args.number, output_path=args.output)
+    main(number_of_rolls=args.number, output_path=args.output, format=args.format)
