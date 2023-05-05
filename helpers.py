@@ -123,7 +123,7 @@ def load_forex():
 def to_usd(curr, value):
     if forex_to_usd is None:
         load_forex()
-    if curr != curr or curr in {"None", "unknown"}:
+    if curr is None or curr != curr or curr in {"None", "unknown"}:
         # Assume USD? None usually corresponds to no reported value.
         return value
 

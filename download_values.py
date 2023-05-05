@@ -175,7 +175,7 @@ async def download_market_cap(session, symbol: str, last_updated_us: int):
         DB.commit()
 
 
-async def main(download_fn, table: str, start_symbol: Optional[str]=None, max_age: datetime.timedelta = datetime.timedelta(days=1)):
+async def main(download_fn, table: str, max_age: datetime.timedelta = datetime.timedelta(days=1)):
     all_symbols = load_symbols()
 
     epoch = datetime.datetime(1970, 1, 1, tzinfo=datetime.timezone.utc)
@@ -188,10 +188,6 @@ async def main(download_fn, table: str, start_symbol: Optional[str]=None, max_ag
         batch_index = 0
         batch_start = time.monotonic()
         for symbol in all_symbols:
-            # Assume symbols are in alphabetical order.
-            if start_symbol is not None and symbol < start_symbol:
-                continue
-
             if is_fresh(table, symbol, max_last_updated_us):
                 continue
 
@@ -208,7 +204,6 @@ async def main(download_fn, table: str, start_symbol: Optional[str]=None, max_ag
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--start")
     parser.add_argument("--max-age", default="1d")
     parser.add_argument("command")
     args = parser.parse_args()
@@ -228,4 +223,4 @@ if __name__ == "__main__":
     max_age = parse_timedelta(args.max_age)
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
-    loop.run_until_complete(main(download_fn, table, start_symbol=args.start, max_age=max_age))
+    loop.run_until_complete(main(download_fn, table, max_age=max_age))

@@ -16,7 +16,6 @@
 
 import argparse
 import io
-import pathlib
 
 import numpy
 import pandas
@@ -24,26 +23,23 @@ import pandas
 import helpers
 
 
-DIR = pathlib.Path(__file__).parent
-FMP_DIR = DIR / "third_party" / "financialmodelingprep.com"
-quote_path = FMP_DIR / "quote.csv"
-income_path = FMP_DIR / "income-statement.csv"
-balance_sheet_path = FMP_DIR / "balance-sheet-statement.csv"
-
-
 def load_dfs():
-    quote = pandas.read_csv(quote_path, header=None, names=["symbol", "market_cap"])
-    income = pandas.read_csv(
-        income_path,
-        header=None,
-        names=["symbol", "profit", "revenue", "currency"],
+    all_symbols = pandas.read_csv(
+        helpers.NASDAQ_DIR / "allsymbols.txt", header=None, names=["symbol"]
     )
-    balance_sheet = pandas.read_csv(
-        balance_sheet_path,
-        header=None,
-        names=["symbol", "book", "currency"],
+    quote = pandas.read_sql(
+        "SELECT symbol, market_cap_usd AS market_cap FROM quotes ORDER BY symbol ASC",
+        helpers.DB,
     )
-    return quote, income, balance_sheet
+    income = pandas.read_sql(
+        "SELECT symbol, profit, revenue, currency FROM incomes ORDER BY symbol ASC",
+        helpers.DB,
+    )
+    balance_sheet = pandas.read_sql(
+        "SELECT symbol, book, currency FROM balance_sheets ORDER BY symbol ASC",
+        helpers.DB,
+    )
+    return all_symbols, quote, income, balance_sheet
 
 
 def add_usd_column_from_forex(df, column):
@@ -68,19 +64,23 @@ def output_dataframe(result, output_path, format):
 
 
 def main(number_of_rolls=1, output_path="--", format="csv"):
-    quote, income, balance_sheet = load_dfs()
+    all_symbols, quote, income, balance_sheet = load_dfs()
     add_usd_column_from_forex(income, "revenue")
     add_usd_column_from_forex(income, "profit")
     add_usd_column_from_forex(balance_sheet, "book")
 
-    screen = quote.merge(
-        income.merge(
-            balance_sheet,
+    screen = all_symbols.merge(
+        quote.merge(
+            income.merge(
+                balance_sheet,
+                how="outer",
+                on="symbol",
+            ),
             how="outer",
             on="symbol",
         ),
-        how="outer",
-        on="symbol",
+        # The DB may have out-of-date symbols, use latest from NASDAQ.
+        how="left",
     ).fillna(value=0)
     screen.drop_duplicates(keep="last")
     screen_ones = numpy.ones(len(screen.index))
