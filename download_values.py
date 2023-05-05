@@ -16,15 +16,16 @@
 
 import argparse
 import asyncio
+import datetime
 import logging
-import pathlib
 import time
-import sqlite3
 import sys
 
 import aiohttp
 
 from helpers import *
+
+from typing import Optional
 
 
 FMP_QUOTE = "https://financialmodelingprep.com/api/v3/quote/{symbol}?apikey={apikey}"
@@ -46,8 +47,22 @@ def load_symbols():
     return all_symbols
 
 
+def is_fresh(table: str, symbol: str, max_last_updated_us: int) -> bool:
+    cursor = DB.execute(
+        f"SELECT last_updated_us FROM {table} WHERE symbol = :symbol", {"symbol": symbol}
+    )
+    previous_last_updated = cursor.fetchone()
+    return (
+        previous_last_updated is not None
+        and previous_last_updated[0] is not None
+        and previous_last_updated[0] > max_last_updated_us
+    )
+
+
 @retry_fmp
-async def download_income(session, symbol, out):
+async def download_income(
+    session, symbol: str, last_updated_us: int
+):
     """
     https://www.ftserussell.com/research/factor-exposure-indexes-value-factor
 
@@ -69,11 +84,30 @@ async def download_income(session, symbol, out):
         if profit is None:
             logging.warning(f"no profit for {symbol}")
             profit = 0
-        out.write(f"{symbol},{profit},{revenue},{currency}\n")
+
+        DB.execute(
+            """INSERT INTO incomes
+            (symbol, profit, revenue, currency, last_updated_us)
+            VALUES (:symbol, :profit, :revenue, :currency, :last_updated_us)
+            ON CONFLICT(symbol) DO UPDATE
+            SET profit=excluded.profit,
+              revenue=excluded.revenue,
+              currency=excluded.currency,
+              last_updated_us=excluded.last_updated_us
+            """,
+            {
+                "symbol": symbol,
+                "profit": float(profit),
+                "revenue": float(revenue),
+                "currency": currency,
+                "last_updated_us": last_updated_us,
+            },
+        )
+        DB.commit()
 
 
 @retry_fmp
-async def download_balance_sheet(session, symbol, out):
+async def download_balance_sheet(session, symbol: str, last_updated_us: int):
     """
     https://codingandfun.com/how-to-calculate-price-book-ratio-with-python/
 
@@ -92,11 +126,28 @@ async def download_balance_sheet(session, symbol, out):
         if book_value is None:
             logging.warning(f"no book value for {symbol}")
             book_value = 0
-        out.write(f"{symbol},{book_value},{currency}\n")
+
+        DB.execute(
+            """INSERT INTO balance_sheets 
+            (symbol, book, currency, last_updated_us)
+            VALUES (:symbol, :book, :currency, :last_updated_us)
+            ON CONFLICT(symbol) DO UPDATE
+            SET book=excluded.book,
+              currency=excluded.currency,
+              last_updated_us=excluded.last_updated_us
+            """,
+            {
+                "symbol": symbol,
+                "book": float(book_value),
+                "currency": currency,
+                "last_updated_us": last_updated_us,
+            },
+        )
+        DB.commit()
 
 
 @retry_fmp
-async def download_market_cap(session, symbol, out):
+async def download_market_cap(session, symbol: str, last_updated_us: int):
     url = FMP_QUOTE.format(symbol=symbol, apikey=FMP_API_KEY)
     async with session.get(url) as resp:
         resp_json = await check_status(resp)
@@ -106,55 +157,75 @@ async def download_market_cap(session, symbol, out):
         if market_cap is None:
             logging.warning(f"no market cap for {symbol}")
             market_cap = 0
-        out.write(f"{symbol},{market_cap}\n")
+
+        DB.execute(
+            """INSERT INTO quotes 
+            (symbol, market_cap_usd, last_updated_us)
+            VALUES (:symbol, :market_cap_usd, :last_updated_us)
+            ON CONFLICT(symbol) DO UPDATE
+            SET market_cap_usd=excluded.market_cap_usd,
+              last_updated_us=excluded.last_updated_us
+            """,
+            {
+                "symbol": symbol,
+                "market_cap_usd": float(market_cap),
+                "last_updated_us": last_updated_us,
+            },
+        )
+        DB.commit()
 
 
-async def main(csv_path, download_fn, start_symbol=None):
-    # all_symbols = load_symbols()[:1]
+async def main(download_fn, table: str, start_symbol: Optional[str]=None, max_age: datetime.timedelta = datetime.timedelta(days=1)):
     all_symbols = load_symbols()
 
-    if start_symbol is not None:
-        mode = "a"
-    else:
-        mode = "w"
+    epoch = datetime.datetime(1970, 1, 1, tzinfo=datetime.timezone.utc)
+    now = datetime.datetime.now(datetime.timezone.utc)
+    last_updated_us = (now - epoch) / datetime.timedelta(microseconds=1)
+    # The oldest we'll allow a value to be before we have to refresh it.
+    max_last_updated_us = ((now - max_age) - epoch) / datetime.timedelta(microseconds=1)
 
-    with open(csv_path, mode) as out:
-        async with aiohttp.ClientSession() as session:
-            batch_index = 0
-            batch_start = time.monotonic()
-            for symbol in all_symbols:
-                # Assume symbols are in alphabetical order.
-                if start_symbol is not None and symbol < start_symbol:
-                    continue
+    async with aiohttp.ClientSession() as session:
+        batch_index = 0
+        batch_start = time.monotonic()
+        for symbol in all_symbols:
+            # Assume symbols are in alphabetical order.
+            if start_symbol is not None and symbol < start_symbol:
+                continue
 
-                # Rate limit!
-                if batch_index >= BATCH_SIZE:
-                    batch_time = time.monotonic() - batch_start()
-                    remaining = BATCH_WAIT - batch_time
-                    if remaining > 0:
-                        await asyncio.sleep(remaining)
-                    batch_start = time.monotonic()
-                    batch_index = 0
-                await download_fn(session, symbol, out)
+            if is_fresh(table, symbol, max_last_updated_us):
+                continue
+
+            # Rate limit!
+            if batch_index >= BATCH_SIZE:
+                batch_time = time.monotonic() - batch_start()
+                remaining = BATCH_WAIT - batch_time
+                if remaining > 0:
+                    await asyncio.sleep(remaining)
+                batch_start = time.monotonic()
+                batch_index = 0
+            await download_fn(session, symbol, last_updated_us)
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--start")
+    parser.add_argument("--max-age", default="1d")
     parser.add_argument("command")
     args = parser.parse_args()
     command = args.command
     if command == "quote":
-        csv_path = FMP_DIR / "quote.csv"
+        table = "quotes"
         download_fn = download_market_cap
     elif command == "balance-sheet":
-        csv_path = FMP_DIR / "balance-sheet-statement.csv"
+        table = "balance_sheets"
         download_fn = download_balance_sheet
     elif command == "income":
-        csv_path = FMP_DIR / "income-statement.csv"
+        table = "incomes"
         download_fn = download_income
     else:
         sys.exit("expected {quote,balance-sheet,income}")
+    
+    max_age = parse_timedelta(args.max_age)
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
-    loop.run_until_complete(main(csv_path, download_fn, start_symbol=args.start))
+    loop.run_until_complete(main(download_fn, table, start_symbol=args.start, max_age=max_age))

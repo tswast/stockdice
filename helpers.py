@@ -14,8 +14,10 @@
 # limitations under the License.
 
 import asyncio
+import datetime
 import pathlib
 import functools
+import re
 import sqlite3
 
 import toml
@@ -71,6 +73,33 @@ async def check_status(resp):
     return resp_json
 
 
+TIMEDELTA_REGEX = re.compile(
+    r"^(?P<length>[0-9]+)(?P<units>w|d|h|s|ms|us)$"
+)
+TIMEDELTA_UNITS = {
+    "w": "weeks",
+    "d": "days",
+    "h": "hours",
+    # Intentionally omitting minutes since it could be ambiguous with months.
+    "s": "seconds",
+    "ms": "milliseconds",
+    "us": "microseconds",
+}
+
+
+def parse_timedelta(value: str) -> datetime.timedelta:
+    parsed = TIMEDELTA_REGEX.match(value)
+    if not parsed:
+        raise ValueError(r"Invalid timedelta: {value}")
+    groups = parsed.groupdict()
+    length = int(groups["length"])
+    units = groups["units"]
+    kwargs = {
+        TIMEDELTA_UNITS[units]: length,
+    }
+    return datetime.timedelta(**kwargs)
+
+
 def load_forex():
     global forex_to_usd
     forex_to_usd = {"USD": 1.0}
@@ -100,6 +129,7 @@ def to_usd(curr, value):
 
     return forex_to_usd[curr] * value
 
+
 __all__ = [
     "DB",
     "DIR",
@@ -107,7 +137,8 @@ __all__ = [
     "FMP_DIR",
     "FMP_API_KEY",
     "RateLimitError",
-    "retry_fmp",
     "check_status",
+    "parse_timedelta",
+    "retry_fmp",
     "to_usd",
 ]

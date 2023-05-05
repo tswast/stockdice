@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
-# Copyright 2021 Banana Juice LLC
+# Copyright 2023 Banana Juice LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -28,7 +28,7 @@ def create_quote():
     CREATE TABLE quotes(
     symbol STRING PRIMARY KEY,
     market_cap_usd REAL,
-    last_updated_ms INTEGER
+    last_updated_us INTEGER
     );
     """)
 
@@ -46,7 +46,7 @@ def create_balance_sheet():
     symbol STRING PRIMARY KEY,
     book REAL,
     currency STRING,
-    last_updated_ms INTEGER
+    last_updated_us INTEGER
     );
     """)
 
@@ -70,7 +70,7 @@ def create_income():
     profit REAL,
     revenue REAL,
     currency STRING,
-    last_updated_ms INTEGER
+    last_updated_us INTEGER
     );
     """)
 
