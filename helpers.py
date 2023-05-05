@@ -16,11 +16,13 @@
 import asyncio
 import pathlib
 import functools
+import sqlite3
 
 import toml
 
 
 DIR = pathlib.Path(__file__).parent
+DB = sqlite3.connect(DIR / "third_party" / "financialmodelingprep.com" / "stockdice.sqlite")
 NASDAQ_DIR = DIR / "third_party" / "ftp.nasdaqtrader.com"
 FMP_DIR = DIR / "third_party" / "financialmodelingprep.com"
 
@@ -99,6 +101,7 @@ def to_usd(curr, value):
     return forex_to_usd[curr] * value
 
 __all__ = [
+    "DB",
     "DIR",
     "NASDAQ_DIR",
     "FMP_DIR",
