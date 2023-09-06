@@ -109,6 +109,9 @@ def load_forex():
         for line in forex_csv:
             line = line.strip()
             ticker, bid, ask = line.split(",")
+            if bid == "None" or ask == "None":
+                # Skip invalid currencies.
+                continue
             # Use average of bid/ask for simplicity.
             price = (float(bid) + float(ask)) / 2.0
             from_curr, to_curr = ticker.split("/")
