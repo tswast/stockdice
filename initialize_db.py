@@ -23,7 +23,7 @@ from helpers import *
 
 
 def create_quote():
-    DB.execute("DROP TABLE quotes;")
+    DB.execute("DROP TABLE IF EXISTS quotes;")
     DB.execute("""
     CREATE TABLE quotes(
     symbol STRING PRIMARY KEY,
@@ -40,7 +40,7 @@ def load_quote(quote_path):
 
 
 def create_balance_sheet():
-    DB.execute("DROP TABLE balance_sheets;")
+    DB.execute("DROP TABLE IF EXISTS balance_sheets;")
     DB.execute("""
     CREATE TABLE balance_sheets(
     symbol STRING PRIMARY KEY,
@@ -63,7 +63,7 @@ def load_balance_sheet(balance_sheet_path):
 
 
 def create_income():
-    DB.execute("DROP TABLE incomes;")
+    DB.execute("DROP TABLE IF EXISTS incomes;")
     DB.execute("""
     CREATE TABLE incomes(
     symbol STRING PRIMARY KEY,
@@ -94,15 +94,29 @@ if __name__ == "__main__":
     if command == "quote":
         csv_path = FMP_DIR / "quote.csv"
         create_quote()
-        load_quote(csv_path)
+        try:
+            load_quote(csv_path)
+        except FileNotFoundError:
+            print("no CSV to migrate, finished")
     elif command == "balance-sheet":
         csv_path = FMP_DIR / "balance-sheet-statement.csv"
         create_balance_sheet()
-        load_balance_sheet(csv_path)
+        try:
+            load_balance_sheet(csv_path)
+        except FileNotFoundError:
+            print("no CSV to migrate, finished")
     elif command == "income":
         csv_path = FMP_DIR / "income-statement.csv"
         create_income()
-        load_income(csv_path)
+        try:
+            load_income(csv_path)
+        except FileNotFoundError:
+            print("no CSV to migrate, finished")
+    elif command == "all":
+        create_quote()
+        create_balance_sheet()
+        create_income()
+        print("database initialized")
     else:
         sys.exit("expected {quote,balance-sheet,income}")
     
